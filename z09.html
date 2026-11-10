@@ -1,0 +1,147 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>回 · 池上</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet"><style>
+:root{
+  --ink:#1d1d1b; --paper:#f4ecd8; --card:#fffdf6; --red:#c0392b;
+  --brush:'Ma Shan Zheng','KaiTi','STKaiti','Kaiti SC','Songti SC',serif;
+  --body:'Noto Serif SC','Songti SC','SimSun',Georgia,serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; color:var(--ink); font-family:var(--body);
+  background:
+    radial-gradient(ellipse at 20% 0%, rgba(255,255,255,.55), transparent 55%),
+    radial-gradient(ellipse at 90% 100%, rgba(190,160,110,.18), transparent 50%),
+    var(--paper);
+  min-height:100vh; -webkit-tap-highlight-color:transparent; overflow-x:hidden;
+}
+button{font:inherit; color:inherit; cursor:pointer; touch-action:manipulation}
+button:focus-visible,a:focus-visible{outline:4px solid #3578c6; outline-offset:3px}
+.wrap{max-width:560px; margin:0 auto; padding:16px 16px 44px; display:flex; flex-direction:column; align-items:center; gap:20px}
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation:none!important; transition-duration:.01ms!important; scroll-behavior:auto!important}
+}
+
+.pic{width:min(78vw,320px); aspect-ratio:16/9; border:3px solid var(--ink); border-radius:14px; background:var(--card); display:grid; place-items:center}
+.pic svg{height:88%; width:auto; display:block; stroke-width:1.3}
+.sq{width:min(78vw,320px); aspect-ratio:1; border:3px solid var(--ink); border-radius:6px; background:var(--card); transition:background .3s}
+.sq svg{display:block; width:100%; height:100%}
+.py{margin:0 0 -16px; min-height:1.3em; font-family:var(--body); font-weight:700; font-size:34px; line-height:1.3; letter-spacing:.04em; text-align:center; color:var(--ink)}
+.py.hide{visibility:hidden}
+.big{width:100%; min-height:150px; border:0; background:transparent; padding:0; line-height:1.15;
+  font-family:var(--brush); font-size:124px; color:var(--ink); white-space:nowrap; overflow:hidden; text-align:center}
+.big.en{font-family:var(--body); font-weight:700}
+.vrow{display:flex; gap:8px; width:100%; justify-content:center}
+.vb{flex:1 1 0; min-width:0; max-width:76px; height:64px; border:3px solid var(--ink); border-radius:12px; background:var(--card); padding:4px; display:grid; place-items:center}
+.vb svg{width:100%; height:100%; display:block}
+.vb.on{box-shadow:0 0 0 3px var(--paper), 0 0 0 6px var(--ink)}
+.gf{margin:4px 0 -6px; font-family:var(--body); font-size:22px; font-weight:700; letter-spacing:.04em; align-self:flex-start}
+.words{display:grid; grid-template-columns:1fr; gap:12px; width:100%}
+@media (min-width:520px){.words{grid-template-columns:1fr 1fr}}
+.w{display:flex; align-items:center; gap:12px; min-height:68px; padding:6px 14px 6px 10px; border:3px solid var(--ink); border-radius:16px; background:var(--card); text-align:left; min-width:0}
+.w .ic{flex:0 0 46px; width:46px; height:46px}
+.w .ic svg{width:100%; height:100%; display:block}
+.w .t{flex:1 1 auto; min-width:0; white-space:nowrap; overflow:hidden; font-family:var(--brush); font-size:32px; line-height:1.2}
+.w.en{border-color:var(--red)}
+.w.en .t{font-family:var(--body); font-weight:700; color:var(--red)}
+.back{display:flex; align-items:center; justify-content:center; min-height:64px; width:100%; margin-top:6px; border:3px solid var(--ink); border-radius:16px; background:var(--ink); color:var(--paper); text-decoration:none; font-family:var(--brush); font-size:30px}
+</style></head><body><div class="wrap"><div class="sq" id="sq"></div><div class="py" id="py" aria-hidden="true"></div><button type="button" class="big" id="big"></button><h2 class="gf">Good friends</h2><div class="words"><button type="button" class="w" data-zh="回家" data-en="home"><span class="ic"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false" fill="none" stroke="#222" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20v22h26V20" fill="#fff"/><path d="M5 24L24 7l19 17"/><rect x="20" y="28" width="8" height="14" fill="#fff"/></svg></span><span class="t">回家</span></button><button type="button" class="w" data-zh="回来" data-en="back"><span class="ic"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false" fill="none" stroke="#222" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M40 40V26q0-8-8-8H10"/><path d="M18 10l-8 8 8 8"/></svg></span><span class="t">回来</span></button><button type="button" class="w" data-zh="回答" data-en="answer"><span class="ic"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false" fill="none" stroke="#222" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h24v16H17l-7 6v-6H5z" fill="#fff"/><path d="M20 28h23v14h-5v5l-7-5H20z" fill="#fff"/></svg></span><span class="t">回答</span></button></div><a class="back" href="./">回到诗</a></div><script>
+(function(){
+  var DATA={"回":{"s":["M 201 650 Q 177 663 153 670 Q 143 674 137 667 Q 127 660 139 645 Q 211 516 208 229 Q 209 154 256 113 Q 257 113 260 111 Q 282 104 284 144 Q 284 147 284 149 L 281 190 Q 278 212 273 234 Q 243 498 242 599 C 241 629 228 637 201 650 Z","M 700 179 Q 712 151 734 106 Q 744 87 755 88 Q 773 91 783 120 Q 832 220 837 355 Q 846 439 854 536 Q 858 596 886 632 Q 907 657 891 673 Q 864 698 807 723 Q 783 735 744 720 Q 626 684 492 666 Q 374 653 201 650 C 171 649 213 593 242 599 Q 260 608 706 659 Q 757 666 776 642 Q 789 620 789 596 Q 788 418 752 245 Q 748 214 736 212 Q 733 211 727 212 C 706 191 698 183 700 179 Z","M 416 495 Q 406 502 369 508 Q 359 511 355 506 Q 349 500 357 485 Q 382 434 399 349 Q 402 324 417 307 Q 433 286 438 301 Q 441 308 441 318 L 439 351 Q 439 354 439 356 Q 426 432 422 463 C 418 493 418 494 416 495 Z","M 614 363 Q 636 435 660 455 Q 685 482 662 498 Q 641 511 613 533 Q 594 546 572 534 Q 524 510 416 495 C 386 491 392 458 422 463 Q 467 470 538 480 Q 569 484 575 472 Q 582 466 575 437 Q 568 407 561 374 C 555 345 605 334 614 363 Z","M 441 318 Q 448 317 459 319 Q 510 329 619 334 Q 629 335 631 344 Q 631 351 614 363 L 561 374 Q 558 375 555 374 Q 491 359 439 351 C 409 346 411 319 441 318 Z","M 284 149 Q 293 148 304 149 Q 431 171 700 179 C 730 180 750 193 727 212 Q 694 245 625 229 Q 435 199 281 190 C 251 188 254 150 284 149 Z"],"m":[[[147,659],[182,626],[205,584],[224,455],[242,220],[266,125]],[[210,649],[220,640],[259,627],[508,650],[763,691],[788,686],[821,662],[832,649],[832,639],[801,317],[782,216],[755,169],[755,104]],[[363,499],[392,474],[428,306]],[[427,469],[438,481],[450,484],[554,503],[592,504],[620,475],[595,396],[569,379]],[[445,324],[461,337],[552,352],[621,344]],[[289,156],[303,171],[717,211]]]}}, CFG={"base":"回","baseEn":"back","variants":null,"variantStart":0,"pics":{},"py":{"回":"huí"}};
+  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var sq=document.getElementById('sq'), big=document.getElementById('big');
+  var picEl=document.getElementById('pic'), vrow=document.getElementById('vrow');
+  var cur={ch:CFG.base, en:CFG.baseEn, bg:'#fffdf6', ink:'#1d1d1b', fg:'#1d1d1b', outline:null, grid:'rgba(0,0,0,.16)'};
+  var showEn=false, raf=0, token=0;
+
+  function fit(el,max,min){
+    el.style.fontSize=max+'px';
+    var s=max;
+    while(el.scrollWidth>el.clientWidth+0.5 && s>min){ s-=1; el.style.fontSize=s+'px'; }
+  }
+  function updateBig(){
+    var py=document.getElementById('py'); py.textContent=CFG.py[cur.ch]||''; py.classList.toggle('hide',showEn);
+    big.textContent=showEn?cur.en:cur.ch;
+    big.className='big'+(showEn?' en':'');
+    big.style.color=cur.fg;
+    var o=cur.outline;
+    big.style.textShadow=o?'-2px 0 '+o+',2px 0 '+o+',0 -2px '+o+',0 2px '+o+',-2px -2px '+o+',2px 2px '+o+',-2px 2px '+o+',2px -2px '+o:'none';
+    if(showEn){ fit(big,64,18); } else { big.style.fontSize=''; }
+    big.setAttribute('aria-label',showEn?cur.en:cur.ch);
+  }
+  big.addEventListener('click',function(){ showEn=!showEn; updateBig(); });
+
+  function poly(m){
+    var pts=m.map(function(p){return [p[0],p[1]];});
+    function ext(a,b,d){ var dx=a[0]-b[0], dy=a[1]-b[1], l=Math.sqrt(dx*dx+dy*dy)||1; return [a[0]+dx/l*d, a[1]+dy/l*d]; }
+    if(pts.length>1){ pts[0]=ext(pts[0],pts[1],22); pts[pts.length-1]=ext(pts[pts.length-1],pts[pts.length-2],22); }
+    var len=0; for(var i=1;i<pts.length;i++){ var dx=pts[i][0]-pts[i-1][0], dy=pts[i][1]-pts[i-1][1]; len+=Math.sqrt(dx*dx+dy*dy); }
+    return {d:'M'+pts.map(function(p){return Math.round(p[0])+' '+Math.round(p[1]);}).join('L'), len:len};
+  }
+
+  function startWriting(){
+    token++; cancelAnimationFrame(raf);
+    var d=DATA[cur.ch]; if(!d) return;
+    var defs='', ghost='', strokes='', dur=[], start=[], t=0;
+    d.s.forEach(function(p,i){
+      var m=poly(d.m[i]);
+      defs+='<clipPath id="cp'+i+'"><path d="'+p+'"/></clipPath>';
+      ghost+='<path d="'+p+'"/>';
+      strokes+='<g clip-path="url(#cp'+i+')"><path class="mk" d="'+m.d+'" pathLength="1" fill="none" stroke="'+cur.ink+'" stroke-width="170" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1 2" stroke-dashoffset="'+(reduce?0:1)+'"/></g>';
+      dur.push(Math.max(380,Math.min(900,m.len*0.9))); start.push(t); t+=dur[i]+140;
+    });
+    sq.style.background=cur.bg;
+    sq.innerHTML='<svg viewBox="0 0 1024 1024" role="img" aria-label="'+cur.ch+'">'+
+      '<g stroke="'+cur.grid+'" stroke-width="5" stroke-dasharray="16 14" fill="none"><path d="M512 8V1016M8 512H1016M8 8L1016 1016M1016 8L8 1016"/></g>'+
+      '<g transform="scale(1,-1) translate(0,-900)"><defs>'+defs+'</defs>'+
+      '<g fill="'+cur.ink+'" opacity=".08">'+ghost+'</g><g class="gm">'+strokes+'</g></g></svg>';
+    if(reduce) return;
+    var marks=sq.querySelectorAll('.mk'), gm=sq.querySelector('.gm');
+    var writeEnd=t-140, HOLD=1300, FADE=450, PAUSE=350, total=writeEnd+HOLD+FADE+PAUSE;
+    var my=token, t0=performance.now();
+    function frame(now){
+      if(my!==token) return;
+      var e=(now-t0)%total;
+      for(var i=0;i<marks.length;i++){
+        var p=Math.max(0,Math.min(1,(e-start[i])/dur[i]));
+        p=1-Math.pow(1-p,1.6);
+        marks[i].setAttribute('stroke-dashoffset',String(1-p));
+      }
+      var f=e>writeEnd+HOLD?Math.max(0,1-(e-writeEnd-HOLD)/FADE):1;
+      gm.setAttribute('opacity',String(f));
+      raf=requestAnimationFrame(frame);
+    }
+    raf=requestAnimationFrame(frame);
+  }
+
+  function choose(i){
+    var it=CFG.variants.items[i];
+    cur.ch=it.ch; cur.en=it.en;
+    if(CFG.variants.kind==='color'){
+      cur.bg=it.bg; cur.ink=it.ink; cur.fg=it.fg; cur.outline=it.outline;
+      cur.grid=(it.ink==='#ffffff')?'rgba(255,255,255,.35)':'rgba(0,0,0,.16)';
+    } else {
+      picEl.innerHTML=CFG.pics[it.pic];
+    }
+    var bs=vrow.querySelectorAll('.vb');
+    for(var k=0;k<bs.length;k++){ bs[k].classList.toggle('on',k===i); bs[k].setAttribute('aria-pressed',k===i?'true':'false'); }
+    showEn=false; updateBig(); startWriting();
+  }
+  if(CFG.variants){
+    var bs=vrow.querySelectorAll('.vb');
+    for(var k=0;k<bs.length;k++){ (function(k){ bs[k].addEventListener('click',function(){ choose(k); }); })(k); }
+    choose(CFG.variantStart);
+  } else { updateBig(); startWriting(); }
+
+  var ws=document.querySelectorAll('.w');
+  function fitWord(b){ var t=b.querySelector('.t'); if(b.classList.contains('en')) fit(t,28,11); else t.style.fontSize=''; }
+  for(var i=0;i<ws.length;i++){ (function(b){
+    b.addEventListener('click',function(){
+      var on=b.classList.toggle('en');
+      b.querySelector('.t').textContent=on?b.getAttribute('data-en'):b.getAttribute('data-zh');
+      fitWord(b);
+    });
+  })(ws[i]); }
+  window.addEventListener('resize',function(){ for(var i=0;i<ws.length;i++) fitWord(ws[i]); if(showEn) updateBig(); });
+  if(document.fonts&&document.fonts.ready) document.fonts.ready.then(function(){ for(var i=0;i<ws.length;i++) fitWord(ws[i]); if(showEn) updateBig(); });
+})();
+</script></body></html>

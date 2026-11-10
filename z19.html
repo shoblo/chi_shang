@@ -1,0 +1,147 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>开 · 池上</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet"><style>
+:root{
+  --ink:#1d1d1b; --paper:#f4ecd8; --card:#fffdf6; --red:#c0392b;
+  --brush:'Ma Shan Zheng','KaiTi','STKaiti','Kaiti SC','Songti SC',serif;
+  --body:'Noto Serif SC','Songti SC','SimSun',Georgia,serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; color:var(--ink); font-family:var(--body);
+  background:
+    radial-gradient(ellipse at 20% 0%, rgba(255,255,255,.55), transparent 55%),
+    radial-gradient(ellipse at 90% 100%, rgba(190,160,110,.18), transparent 50%),
+    var(--paper);
+  min-height:100vh; -webkit-tap-highlight-color:transparent; overflow-x:hidden;
+}
+button{font:inherit; color:inherit; cursor:pointer; touch-action:manipulation}
+button:focus-visible,a:focus-visible{outline:4px solid #3578c6; outline-offset:3px}
+.wrap{max-width:560px; margin:0 auto; padding:16px 16px 44px; display:flex; flex-direction:column; align-items:center; gap:20px}
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation:none!important; transition-duration:.01ms!important; scroll-behavior:auto!important}
+}
+
+.pic{width:min(78vw,320px); aspect-ratio:16/9; border:3px solid var(--ink); border-radius:14px; background:var(--card); display:grid; place-items:center}
+.pic svg{height:88%; width:auto; display:block; stroke-width:1.3}
+.sq{width:min(78vw,320px); aspect-ratio:1; border:3px solid var(--ink); border-radius:6px; background:var(--card); transition:background .3s}
+.sq svg{display:block; width:100%; height:100%}
+.py{margin:0 0 -16px; min-height:1.3em; font-family:var(--body); font-weight:700; font-size:34px; line-height:1.3; letter-spacing:.04em; text-align:center; color:var(--ink)}
+.py.hide{visibility:hidden}
+.big{width:100%; min-height:150px; border:0; background:transparent; padding:0; line-height:1.15;
+  font-family:var(--brush); font-size:124px; color:var(--ink); white-space:nowrap; overflow:hidden; text-align:center}
+.big.en{font-family:var(--body); font-weight:700}
+.vrow{display:flex; gap:8px; width:100%; justify-content:center}
+.vb{flex:1 1 0; min-width:0; max-width:76px; height:64px; border:3px solid var(--ink); border-radius:12px; background:var(--card); padding:4px; display:grid; place-items:center}
+.vb svg{width:100%; height:100%; display:block}
+.vb.on{box-shadow:0 0 0 3px var(--paper), 0 0 0 6px var(--ink)}
+.gf{margin:4px 0 -6px; font-family:var(--body); font-size:22px; font-weight:700; letter-spacing:.04em; align-self:flex-start}
+.words{display:grid; grid-template-columns:1fr; gap:12px; width:100%}
+@media (min-width:520px){.words{grid-template-columns:1fr 1fr}}
+.w{display:flex; align-items:center; gap:12px; min-height:68px; padding:6px 14px 6px 10px; border:3px solid var(--ink); border-radius:16px; background:var(--card); text-align:left; min-width:0}
+.w .ic{flex:0 0 46px; width:46px; height:46px}
+.w .ic svg{width:100%; height:100%; display:block}
+.w .t{flex:1 1 auto; min-width:0; white-space:nowrap; overflow:hidden; font-family:var(--brush); font-size:32px; line-height:1.2}
+.w.en{border-color:var(--red)}
+.w.en .t{font-family:var(--body); font-weight:700; color:var(--red)}
+.back{display:flex; align-items:center; justify-content:center; min-height:64px; width:100%; margin-top:6px; border:3px solid var(--ink); border-radius:16px; background:var(--ink); color:var(--paper); text-decoration:none; font-family:var(--brush); font-size:30px}
+</style></head><body><div class="wrap"><div class="sq" id="sq"></div><div class="py" id="py" aria-hidden="true"></div><button type="button" class="big" id="big"></button><h2 class="gf">Good friends</h2><div class="words"><button type="button" class="w" data-zh="开心" data-en="happy"><span class="ic"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false" fill="none" stroke="#222" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="18" fill="#fff"/><circle cx="18" cy="20" r="1.800" fill="#222"/><circle cx="30" cy="20" r="1.800" fill="#222"/><path d="M15 28q9 10 18 0"/></svg></span><span class="t">开心</span></button><button type="button" class="w" data-zh="开门" data-en="open"><span class="ic"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false" fill="none" stroke="#222" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6h24v36H12z"/><path d="M12 8l16 4v28l-16 2z" fill="#fff"/><circle cx="24" cy="26" r="1.500" fill="#222"/></svg></span><span class="t">开门</span></button><button type="button" class="w" data-zh="开车" data-en="drive"><span class="ic"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false" fill="none" stroke="#222" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 32l4-10q1-4 6-4h16q5 0 7 4l7 6v10H4z" fill="#fff"/><path d="M12 22h10v6H10zM26 22h6l5 6H26z"/><circle cx="14" cy="40" r="5" fill="#fff"/><circle cx="36" cy="40" r="5" fill="#fff"/></svg></span><span class="t">开车</span></button><button type="button" class="w" data-zh="开花" data-en="bloom"><span class="ic"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false" fill="none" stroke="#222" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M24 38v8"/><g fill="#fff"><circle cx="24" cy="12" r="6"/><circle cx="35" cy="20" r="6"/><circle cx="31" cy="32" r="6"/><circle cx="17" cy="32" r="6"/><circle cx="13" cy="20" r="6"/></g><circle cx="24" cy="23" r="5" fill="#222"/></svg></span><span class="t">开花</span></button></div><a class="back" href="./">回到诗</a></div><script>
+(function(){
+  var DATA={"开":{"s":["M 612 685 Q 634 691 660 694 Q 717 706 726 713 Q 736 722 731 731 Q 724 744 693 753 Q 663 760 557 728 Q 431 700 324 691 Q 284 687 312 667 Q 355 640 417 652 Q 487 665 561 677 L 612 685 Z","M 653 401 Q 752 411 907 399 Q 932 396 938 405 Q 945 418 933 431 Q 902 459 857 480 Q 842 487 815 478 Q 742 462 667 451 Q 660 451 653 449 L 594 442 Q 453 429 407 421 L 350 414 Q 310 413 282 407 Q 209 395 101 394 Q 86 394 85 382 Q 85 369 104 354 Q 149 321 187 334 Q 229 350 342 365 Q 343 366 347 366 L 403 375 Q 460 387 594 395 L 653 401 Z","M 407 421 Q 411 464 413 514 Q 417 535 419 546 Q 425 568 403 578 Q 354 603 337 601 Q 316 597 333 574 Q 354 535 350 414 L 347 366 Q 347 245 264 128 Q 216 77 200 61 Q 185 48 182 41 Q 179 34 192 34 Q 208 34 230 49 Q 273 77 300 106 Q 373 187 394 314 Q 398 342 403 375 L 407 421 Z","M 599 -2 Q 605 -30 613 -41 Q 619 -48 627 -46 Q 645 -37 651 31 Q 658 115 656 197 Q 653 248 653 401 L 653 449 Q 653 554 665 632 Q 669 651 653 663 Q 628 679 612 685 C 585 698 551 705 561 677 Q 558 670 577 643 Q 587 622 593 530 Q 593 490 594 442 L 594 395 Q 588 68 599 -2 Z"],"m":[[[315,681],[338,674],[390,673],[634,720],[694,728],[719,725]],[[98,381],[125,369],[166,363],[445,405],[833,443],[889,430],[926,414]],[[339,587],[356,577],[381,547],[378,400],[357,262],[332,196],[281,115],[229,66],[190,42]],[[568,674],[608,651],[623,631],[623,-35]]]}}, CFG={"base":"开","baseEn":"open","variants":null,"variantStart":0,"pics":{},"py":{"开":"kāi"}};
+  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var sq=document.getElementById('sq'), big=document.getElementById('big');
+  var picEl=document.getElementById('pic'), vrow=document.getElementById('vrow');
+  var cur={ch:CFG.base, en:CFG.baseEn, bg:'#fffdf6', ink:'#1d1d1b', fg:'#1d1d1b', outline:null, grid:'rgba(0,0,0,.16)'};
+  var showEn=false, raf=0, token=0;
+
+  function fit(el,max,min){
+    el.style.fontSize=max+'px';
+    var s=max;
+    while(el.scrollWidth>el.clientWidth+0.5 && s>min){ s-=1; el.style.fontSize=s+'px'; }
+  }
+  function updateBig(){
+    var py=document.getElementById('py'); py.textContent=CFG.py[cur.ch]||''; py.classList.toggle('hide',showEn);
+    big.textContent=showEn?cur.en:cur.ch;
+    big.className='big'+(showEn?' en':'');
+    big.style.color=cur.fg;
+    var o=cur.outline;
+    big.style.textShadow=o?'-2px 0 '+o+',2px 0 '+o+',0 -2px '+o+',0 2px '+o+',-2px -2px '+o+',2px 2px '+o+',-2px 2px '+o+',2px -2px '+o:'none';
+    if(showEn){ fit(big,64,18); } else { big.style.fontSize=''; }
+    big.setAttribute('aria-label',showEn?cur.en:cur.ch);
+  }
+  big.addEventListener('click',function(){ showEn=!showEn; updateBig(); });
+
+  function poly(m){
+    var pts=m.map(function(p){return [p[0],p[1]];});
+    function ext(a,b,d){ var dx=a[0]-b[0], dy=a[1]-b[1], l=Math.sqrt(dx*dx+dy*dy)||1; return [a[0]+dx/l*d, a[1]+dy/l*d]; }
+    if(pts.length>1){ pts[0]=ext(pts[0],pts[1],22); pts[pts.length-1]=ext(pts[pts.length-1],pts[pts.length-2],22); }
+    var len=0; for(var i=1;i<pts.length;i++){ var dx=pts[i][0]-pts[i-1][0], dy=pts[i][1]-pts[i-1][1]; len+=Math.sqrt(dx*dx+dy*dy); }
+    return {d:'M'+pts.map(function(p){return Math.round(p[0])+' '+Math.round(p[1]);}).join('L'), len:len};
+  }
+
+  function startWriting(){
+    token++; cancelAnimationFrame(raf);
+    var d=DATA[cur.ch]; if(!d) return;
+    var defs='', ghost='', strokes='', dur=[], start=[], t=0;
+    d.s.forEach(function(p,i){
+      var m=poly(d.m[i]);
+      defs+='<clipPath id="cp'+i+'"><path d="'+p+'"/></clipPath>';
+      ghost+='<path d="'+p+'"/>';
+      strokes+='<g clip-path="url(#cp'+i+')"><path class="mk" d="'+m.d+'" pathLength="1" fill="none" stroke="'+cur.ink+'" stroke-width="170" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1 2" stroke-dashoffset="'+(reduce?0:1)+'"/></g>';
+      dur.push(Math.max(380,Math.min(900,m.len*0.9))); start.push(t); t+=dur[i]+140;
+    });
+    sq.style.background=cur.bg;
+    sq.innerHTML='<svg viewBox="0 0 1024 1024" role="img" aria-label="'+cur.ch+'">'+
+      '<g stroke="'+cur.grid+'" stroke-width="5" stroke-dasharray="16 14" fill="none"><path d="M512 8V1016M8 512H1016M8 8L1016 1016M1016 8L8 1016"/></g>'+
+      '<g transform="scale(1,-1) translate(0,-900)"><defs>'+defs+'</defs>'+
+      '<g fill="'+cur.ink+'" opacity=".08">'+ghost+'</g><g class="gm">'+strokes+'</g></g></svg>';
+    if(reduce) return;
+    var marks=sq.querySelectorAll('.mk'), gm=sq.querySelector('.gm');
+    var writeEnd=t-140, HOLD=1300, FADE=450, PAUSE=350, total=writeEnd+HOLD+FADE+PAUSE;
+    var my=token, t0=performance.now();
+    function frame(now){
+      if(my!==token) return;
+      var e=(now-t0)%total;
+      for(var i=0;i<marks.length;i++){
+        var p=Math.max(0,Math.min(1,(e-start[i])/dur[i]));
+        p=1-Math.pow(1-p,1.6);
+        marks[i].setAttribute('stroke-dashoffset',String(1-p));
+      }
+      var f=e>writeEnd+HOLD?Math.max(0,1-(e-writeEnd-HOLD)/FADE):1;
+      gm.setAttribute('opacity',String(f));
+      raf=requestAnimationFrame(frame);
+    }
+    raf=requestAnimationFrame(frame);
+  }
+
+  function choose(i){
+    var it=CFG.variants.items[i];
+    cur.ch=it.ch; cur.en=it.en;
+    if(CFG.variants.kind==='color'){
+      cur.bg=it.bg; cur.ink=it.ink; cur.fg=it.fg; cur.outline=it.outline;
+      cur.grid=(it.ink==='#ffffff')?'rgba(255,255,255,.35)':'rgba(0,0,0,.16)';
+    } else {
+      picEl.innerHTML=CFG.pics[it.pic];
+    }
+    var bs=vrow.querySelectorAll('.vb');
+    for(var k=0;k<bs.length;k++){ bs[k].classList.toggle('on',k===i); bs[k].setAttribute('aria-pressed',k===i?'true':'false'); }
+    showEn=false; updateBig(); startWriting();
+  }
+  if(CFG.variants){
+    var bs=vrow.querySelectorAll('.vb');
+    for(var k=0;k<bs.length;k++){ (function(k){ bs[k].addEventListener('click',function(){ choose(k); }); })(k); }
+    choose(CFG.variantStart);
+  } else { updateBig(); startWriting(); }
+
+  var ws=document.querySelectorAll('.w');
+  function fitWord(b){ var t=b.querySelector('.t'); if(b.classList.contains('en')) fit(t,28,11); else t.style.fontSize=''; }
+  for(var i=0;i<ws.length;i++){ (function(b){
+    b.addEventListener('click',function(){
+      var on=b.classList.toggle('en');
+      b.querySelector('.t').textContent=on?b.getAttribute('data-en'):b.getAttribute('data-zh');
+      fitWord(b);
+    });
+  })(ws[i]); }
+  window.addEventListener('resize',function(){ for(var i=0;i<ws.length;i++) fitWord(ws[i]); if(showEn) updateBig(); });
+  if(document.fonts&&document.fonts.ready) document.fonts.ready.then(function(){ for(var i=0;i<ws.length;i++) fitWord(ws[i]); if(showEn) updateBig(); });
+})();
+</script></body></html>

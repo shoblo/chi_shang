@@ -1,0 +1,147 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>解 · 池上</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet"><style>
+:root{
+  --ink:#1d1d1b; --paper:#f4ecd8; --card:#fffdf6; --red:#c0392b;
+  --brush:'Ma Shan Zheng','KaiTi','STKaiti','Kaiti SC','Songti SC',serif;
+  --body:'Noto Serif SC','Songti SC','SimSun',Georgia,serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; color:var(--ink); font-family:var(--body);
+  background:
+    radial-gradient(ellipse at 20% 0%, rgba(255,255,255,.55), transparent 55%),
+    radial-gradient(ellipse at 90% 100%, rgba(190,160,110,.18), transparent 50%),
+    var(--paper);
+  min-height:100vh; -webkit-tap-highlight-color:transparent; overflow-x:hidden;
+}
+button{font:inherit; color:inherit; cursor:pointer; touch-action:manipulation}
+button:focus-visible,a:focus-visible{outline:4px solid #3578c6; outline-offset:3px}
+.wrap{max-width:560px; margin:0 auto; padding:16px 16px 44px; display:flex; flex-direction:column; align-items:center; gap:20px}
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation:none!important; transition-duration:.01ms!important; scroll-behavior:auto!important}
+}
+
+.pic{width:min(78vw,320px); aspect-ratio:16/9; border:3px solid var(--ink); border-radius:14px; background:var(--card); display:grid; place-items:center}
+.pic svg{height:88%; width:auto; display:block; stroke-width:1.3}
+.sq{width:min(78vw,320px); aspect-ratio:1; border:3px solid var(--ink); border-radius:6px; background:var(--card); transition:background .3s}
+.sq svg{display:block; width:100%; height:100%}
+.py{margin:0 0 -16px; min-height:1.3em; font-family:var(--body); font-weight:700; font-size:34px; line-height:1.3; letter-spacing:.04em; text-align:center; color:var(--ink)}
+.py.hide{visibility:hidden}
+.big{width:100%; min-height:150px; border:0; background:transparent; padding:0; line-height:1.15;
+  font-family:var(--brush); font-size:124px; color:var(--ink); white-space:nowrap; overflow:hidden; text-align:center}
+.big.en{font-family:var(--body); font-weight:700}
+.vrow{display:flex; gap:8px; width:100%; justify-content:center}
+.vb{flex:1 1 0; min-width:0; max-width:76px; height:64px; border:3px solid var(--ink); border-radius:12px; background:var(--card); padding:4px; display:grid; place-items:center}
+.vb svg{width:100%; height:100%; display:block}
+.vb.on{box-shadow:0 0 0 3px var(--paper), 0 0 0 6px var(--ink)}
+.gf{margin:4px 0 -6px; font-family:var(--body); font-size:22px; font-weight:700; letter-spacing:.04em; align-self:flex-start}
+.words{display:grid; grid-template-columns:1fr; gap:12px; width:100%}
+@media (min-width:520px){.words{grid-template-columns:1fr 1fr}}
+.w{display:flex; align-items:center; gap:12px; min-height:68px; padding:6px 14px 6px 10px; border:3px solid var(--ink); border-radius:16px; background:var(--card); text-align:left; min-width:0}
+.w .ic{flex:0 0 46px; width:46px; height:46px}
+.w .ic svg{width:100%; height:100%; display:block}
+.w .t{flex:1 1 auto; min-width:0; white-space:nowrap; overflow:hidden; font-family:var(--brush); font-size:32px; line-height:1.2}
+.w.en{border-color:var(--red)}
+.w.en .t{font-family:var(--body); font-weight:700; color:var(--red)}
+.back{display:flex; align-items:center; justify-content:center; min-height:64px; width:100%; margin-top:6px; border:3px solid var(--ink); border-radius:16px; background:var(--ink); color:var(--paper); text-decoration:none; font-family:var(--brush); font-size:30px}
+</style></head><body><div class="wrap"><div class="sq" id="sq"></div><div class="py" id="py" aria-hidden="true"></div><button type="button" class="big" id="big"></button><h2 class="gf">Good friends</h2><div class="words"><button type="button" class="w" data-zh="解开" data-en="untie"><span class="ic"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false" fill="none" stroke="#222" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M24 24q-8-14-16-6t6 12zM24 24q8-14 16-6t-6 12z" fill="#fff"/><circle cx="24" cy="25" r="4" fill="#fff"/><path d="M22 28l-6 14M26 28l6 14"/></svg></span><span class="t">解开</span></button><button type="button" class="w" data-zh="解渴" data-en="drink"><span class="ic"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false" fill="none" stroke="#222" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 8h28l-4 34H14z" fill="#fff"/><path d="M11.500 20q6-3 12 0t12 0"/><path d="M31 4l-4 16"/></svg></span><span class="t">解渴</span></button><button type="button" class="w" data-zh="解决" data-en="solve"><span class="ic"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false" fill="none" stroke="#222" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8 12h12q-4-8 4-8t4 8h12v12q-8-4-8 4t8 4v12H8z" fill="#fff"/></svg></span><span class="t">解决</span></button></div><a class="back" href="./">回到诗</a></div><script>
+(function(){
+  var DATA={"解":{"s":["M 313 715 Q 358 775 372 784 Q 381 793 378 806 Q 375 818 351 840 Q 329 859 311 860 Q 295 859 300 839 Q 318 781 148 587 Q 138 580 136 573 Q 132 563 145 565 Q 190 572 298 697 L 313 715 Z","M 360 563 Q 478 683 498 694 Q 514 704 504 716 Q 491 728 458 748 Q 442 755 428 746 Q 419 742 349 722 Q 333 718 313 715 C 283 710 269 704 298 697 Q 317 688 398 701 Q 407 702 409 700 Q 413 697 407 687 Q 367 611 342 574 Q 335 564 332 556 C 319 529 339 542 360 563 Z","M 219 538 Q 185 562 165 554 Q 155 547 161 535 Q 176 517 180 450 Q 180 300 158 224 Q 134 137 84 48 Q 80 42 79 36 Q 78 26 87 29 Q 114 35 172 143 Q 178 158 185 174 Q 227 289 231 424 Q 234 508 245 508 C 250 518 244 522 219 538 Z","M 342 531 Q 376 541 416 547 Q 432 550 441 541 Q 451 535 454 489 Q 463 332 452 155 Q 451 130 441 122 Q 429 115 375 128 Q 362 132 362 123 Q 362 117 373 111 Q 422 72 447 42 Q 463 26 475 27 Q 485 28 496 53 Q 509 92 510 148 Q 495 481 513 520 Q 523 538 515 548 Q 506 561 468 581 Q 452 588 436 585 Q 411 576 360 563 L 332 556 Q 277 547 219 538 C 189 533 216 500 245 508 Q 272 515 302 523 L 342 531 Z","M 358 403 Q 377 410 402 416 Q 421 422 425 424 Q 429 431 427 436 Q 421 443 400 447 Q 379 450 359 440 L 317 424 Q 314 424 313 423 Q 286 416 255 411 Q 230 404 249 394 Q 276 385 316 391 L 358 403 Z","M 355 295 Q 377 302 405 309 Q 426 316 429 319 Q 435 326 431 331 Q 425 340 403 344 Q 381 347 358 336 Q 355 335 355 334 C 337 324 337 324 314 319 Q 310 319 309 318 Q 281 311 248 305 Q 221 298 241 287 Q 271 275 314 284 L 355 295 Z","M 355 334 Q 356 364 358 403 L 359 440 Q 359 443 367 500 Q 370 515 342 531 C 317 547 292 551 302 523 Q 301 523 302 522 Q 317 489 317 428 Q 317 427 317 424 L 316 391 Q 315 358 314 319 L 314 284 Q 314 140 324 122 Q 328 118 334 119 Q 343 125 350 169 Q 354 208 355 295 L 355 334 Z","M 689 715 Q 741 728 787 733 Q 805 734 808 730 Q 815 721 814 698 Q 813 632 801 602 Q 786 574 761 577 Q 736 584 714 593 Q 692 600 707 578 Q 750 538 770 507 Q 783 491 798 504 Q 847 537 868 680 Q 872 714 886 733 Q 896 745 891 754 Q 884 764 835 784 Q 816 791 799 780 Q 778 767 700 750 Q 621 731 554 727 Q 538 726 536 718 Q 535 711 556 700 Q 578 687 596 692 Q 627 701 659 708 L 689 715 Z","M 659 708 Q 659 630 550 511 Q 546 507 545 502 Q 545 498 549 499 Q 609 514 695 637 Q 707 656 714 665 Q 720 674 714 685 Q 702 706 689 715 C 666 734 660 738 659 708 Z","M 610 392 Q 629 422 650 437 Q 663 449 652 460 Q 639 470 617 475 Q 598 479 588 476 Q 579 472 585 463 Q 591 445 535 324 Q 532 321 531 315 Q 527 302 539 307 Q 575 346 596 374 L 610 392 Z","M 753 378 Q 852 402 855 404 Q 862 411 859 418 Q 852 428 827 434 Q 796 440 755 422 L 699 406 Q 656 399 610 392 C 580 387 573 386 596 374 Q 611 365 631 361 Q 643 360 700 367 L 753 378 Z","M 751 241 Q 826 251 934 252 Q 952 253 956 261 Q 960 271 945 283 Q 893 319 845 303 Q 805 294 751 282 L 699 272 Q 620 260 530 244 Q 512 243 526 227 Q 539 215 555 211 Q 574 207 588 211 Q 640 227 699 235 L 751 241 Z","M 703 -4 Q 707 -28 714 -37 Q 720 -44 727 -42 Q 740 -33 747 23 Q 754 84 752 146 Q 751 174 751 241 L 751 282 Q 751 325 753 378 L 755 422 Q 756 429 757 433 Q 760 451 763 465 Q 766 481 752 491 Q 721 512 707 514 Q 695 518 680 510 Q 671 503 679 493 Q 698 460 699 406 L 700 367 Q 700 324 699 272 L 699 235 Q 699 28 703 -4 Z"],"m":[[[311,846],[329,825],[336,802],[300,740],[231,652],[176,596],[144,573]],[[303,701],[416,720],[449,706],[363,579],[343,567],[339,558]],[[172,543],[188,531],[206,500],[197,306],[178,216],[151,140],[112,68],[87,37]],[[227,536],[251,526],[436,565],[455,561],[482,530],[483,187],[476,114],[462,87],[370,123]],[[250,403],[307,405],[382,430],[418,431]],[[243,297],[303,298],[384,325],[420,327]],[[309,523],[337,502],[340,491],[331,126]],[[543,717],[597,711],[807,757],[834,751],[846,739],[838,651],[826,595],[812,568],[786,544],[708,587]],[[668,702],[683,687],[684,675],[670,641],[616,563],[550,505]],[[595,468],[614,445],[540,316]],[[603,375],[687,383],[797,412],[850,413]],[[528,236],[573,230],[694,254],[878,280],[946,266]],[[686,501],[705,491],[727,466],[723,-33]]]}}, CFG={"base":"解","baseEn":"untie","variants":null,"variantStart":0,"pics":{},"py":{"解":"jiě"}};
+  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var sq=document.getElementById('sq'), big=document.getElementById('big');
+  var picEl=document.getElementById('pic'), vrow=document.getElementById('vrow');
+  var cur={ch:CFG.base, en:CFG.baseEn, bg:'#fffdf6', ink:'#1d1d1b', fg:'#1d1d1b', outline:null, grid:'rgba(0,0,0,.16)'};
+  var showEn=false, raf=0, token=0;
+
+  function fit(el,max,min){
+    el.style.fontSize=max+'px';
+    var s=max;
+    while(el.scrollWidth>el.clientWidth+0.5 && s>min){ s-=1; el.style.fontSize=s+'px'; }
+  }
+  function updateBig(){
+    var py=document.getElementById('py'); py.textContent=CFG.py[cur.ch]||''; py.classList.toggle('hide',showEn);
+    big.textContent=showEn?cur.en:cur.ch;
+    big.className='big'+(showEn?' en':'');
+    big.style.color=cur.fg;
+    var o=cur.outline;
+    big.style.textShadow=o?'-2px 0 '+o+',2px 0 '+o+',0 -2px '+o+',0 2px '+o+',-2px -2px '+o+',2px 2px '+o+',-2px 2px '+o+',2px -2px '+o:'none';
+    if(showEn){ fit(big,64,18); } else { big.style.fontSize=''; }
+    big.setAttribute('aria-label',showEn?cur.en:cur.ch);
+  }
+  big.addEventListener('click',function(){ showEn=!showEn; updateBig(); });
+
+  function poly(m){
+    var pts=m.map(function(p){return [p[0],p[1]];});
+    function ext(a,b,d){ var dx=a[0]-b[0], dy=a[1]-b[1], l=Math.sqrt(dx*dx+dy*dy)||1; return [a[0]+dx/l*d, a[1]+dy/l*d]; }
+    if(pts.length>1){ pts[0]=ext(pts[0],pts[1],22); pts[pts.length-1]=ext(pts[pts.length-1],pts[pts.length-2],22); }
+    var len=0; for(var i=1;i<pts.length;i++){ var dx=pts[i][0]-pts[i-1][0], dy=pts[i][1]-pts[i-1][1]; len+=Math.sqrt(dx*dx+dy*dy); }
+    return {d:'M'+pts.map(function(p){return Math.round(p[0])+' '+Math.round(p[1]);}).join('L'), len:len};
+  }
+
+  function startWriting(){
+    token++; cancelAnimationFrame(raf);
+    var d=DATA[cur.ch]; if(!d) return;
+    var defs='', ghost='', strokes='', dur=[], start=[], t=0;
+    d.s.forEach(function(p,i){
+      var m=poly(d.m[i]);
+      defs+='<clipPath id="cp'+i+'"><path d="'+p+'"/></clipPath>';
+      ghost+='<path d="'+p+'"/>';
+      strokes+='<g clip-path="url(#cp'+i+')"><path class="mk" d="'+m.d+'" pathLength="1" fill="none" stroke="'+cur.ink+'" stroke-width="170" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1 2" stroke-dashoffset="'+(reduce?0:1)+'"/></g>';
+      dur.push(Math.max(380,Math.min(900,m.len*0.9))); start.push(t); t+=dur[i]+140;
+    });
+    sq.style.background=cur.bg;
+    sq.innerHTML='<svg viewBox="0 0 1024 1024" role="img" aria-label="'+cur.ch+'">'+
+      '<g stroke="'+cur.grid+'" stroke-width="5" stroke-dasharray="16 14" fill="none"><path d="M512 8V1016M8 512H1016M8 8L1016 1016M1016 8L8 1016"/></g>'+
+      '<g transform="scale(1,-1) translate(0,-900)"><defs>'+defs+'</defs>'+
+      '<g fill="'+cur.ink+'" opacity=".08">'+ghost+'</g><g class="gm">'+strokes+'</g></g></svg>';
+    if(reduce) return;
+    var marks=sq.querySelectorAll('.mk'), gm=sq.querySelector('.gm');
+    var writeEnd=t-140, HOLD=1300, FADE=450, PAUSE=350, total=writeEnd+HOLD+FADE+PAUSE;
+    var my=token, t0=performance.now();
+    function frame(now){
+      if(my!==token) return;
+      var e=(now-t0)%total;
+      for(var i=0;i<marks.length;i++){
+        var p=Math.max(0,Math.min(1,(e-start[i])/dur[i]));
+        p=1-Math.pow(1-p,1.6);
+        marks[i].setAttribute('stroke-dashoffset',String(1-p));
+      }
+      var f=e>writeEnd+HOLD?Math.max(0,1-(e-writeEnd-HOLD)/FADE):1;
+      gm.setAttribute('opacity',String(f));
+      raf=requestAnimationFrame(frame);
+    }
+    raf=requestAnimationFrame(frame);
+  }
+
+  function choose(i){
+    var it=CFG.variants.items[i];
+    cur.ch=it.ch; cur.en=it.en;
+    if(CFG.variants.kind==='color'){
+      cur.bg=it.bg; cur.ink=it.ink; cur.fg=it.fg; cur.outline=it.outline;
+      cur.grid=(it.ink==='#ffffff')?'rgba(255,255,255,.35)':'rgba(0,0,0,.16)';
+    } else {
+      picEl.innerHTML=CFG.pics[it.pic];
+    }
+    var bs=vrow.querySelectorAll('.vb');
+    for(var k=0;k<bs.length;k++){ bs[k].classList.toggle('on',k===i); bs[k].setAttribute('aria-pressed',k===i?'true':'false'); }
+    showEn=false; updateBig(); startWriting();
+  }
+  if(CFG.variants){
+    var bs=vrow.querySelectorAll('.vb');
+    for(var k=0;k<bs.length;k++){ (function(k){ bs[k].addEventListener('click',function(){ choose(k); }); })(k); }
+    choose(CFG.variantStart);
+  } else { updateBig(); startWriting(); }
+
+  var ws=document.querySelectorAll('.w');
+  function fitWord(b){ var t=b.querySelector('.t'); if(b.classList.contains('en')) fit(t,28,11); else t.style.fontSize=''; }
+  for(var i=0;i<ws.length;i++){ (function(b){
+    b.addEventListener('click',function(){
+      var on=b.classList.toggle('en');
+      b.querySelector('.t').textContent=on?b.getAttribute('data-en'):b.getAttribute('data-zh');
+      fitWord(b);
+    });
+  })(ws[i]); }
+  window.addEventListener('resize',function(){ for(var i=0;i<ws.length;i++) fitWord(ws[i]); if(showEn) updateBig(); });
+  if(document.fonts&&document.fonts.ready) document.fonts.ready.then(function(){ for(var i=0;i<ws.length;i++) fitWord(ws[i]); if(showEn) updateBig(); });
+})();
+</script></body></html>

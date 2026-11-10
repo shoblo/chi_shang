@@ -1,0 +1,147 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>一 · 池上</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet"><style>
+:root{
+  --ink:#1d1d1b; --paper:#f4ecd8; --card:#fffdf6; --red:#c0392b;
+  --brush:'Ma Shan Zheng','KaiTi','STKaiti','Kaiti SC','Songti SC',serif;
+  --body:'Noto Serif SC','Songti SC','SimSun',Georgia,serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; color:var(--ink); font-family:var(--body);
+  background:
+    radial-gradient(ellipse at 20% 0%, rgba(255,255,255,.55), transparent 55%),
+    radial-gradient(ellipse at 90% 100%, rgba(190,160,110,.18), transparent 50%),
+    var(--paper);
+  min-height:100vh; -webkit-tap-highlight-color:transparent; overflow-x:hidden;
+}
+button{font:inherit; color:inherit; cursor:pointer; touch-action:manipulation}
+button:focus-visible,a:focus-visible{outline:4px solid #3578c6; outline-offset:3px}
+.wrap{max-width:560px; margin:0 auto; padding:16px 16px 44px; display:flex; flex-direction:column; align-items:center; gap:20px}
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation:none!important; transition-duration:.01ms!important; scroll-behavior:auto!important}
+}
+
+.pic{width:min(78vw,320px); aspect-ratio:16/9; border:3px solid var(--ink); border-radius:14px; background:var(--card); display:grid; place-items:center}
+.pic svg{height:88%; width:auto; display:block; stroke-width:1.3}
+.sq{width:min(78vw,320px); aspect-ratio:1; border:3px solid var(--ink); border-radius:6px; background:var(--card); transition:background .3s}
+.sq svg{display:block; width:100%; height:100%}
+.py{margin:0 0 -16px; min-height:1.3em; font-family:var(--body); font-weight:700; font-size:34px; line-height:1.3; letter-spacing:.04em; text-align:center; color:var(--ink)}
+.py.hide{visibility:hidden}
+.big{width:100%; min-height:150px; border:0; background:transparent; padding:0; line-height:1.15;
+  font-family:var(--brush); font-size:124px; color:var(--ink); white-space:nowrap; overflow:hidden; text-align:center}
+.big.en{font-family:var(--body); font-weight:700}
+.vrow{display:flex; gap:8px; width:100%; justify-content:center}
+.vb{flex:1 1 0; min-width:0; max-width:76px; height:64px; border:3px solid var(--ink); border-radius:12px; background:var(--card); padding:4px; display:grid; place-items:center}
+.vb svg{width:100%; height:100%; display:block}
+.vb.on{box-shadow:0 0 0 3px var(--paper), 0 0 0 6px var(--ink)}
+.gf{margin:4px 0 -6px; font-family:var(--body); font-size:22px; font-weight:700; letter-spacing:.04em; align-self:flex-start}
+.words{display:grid; grid-template-columns:1fr; gap:12px; width:100%}
+@media (min-width:520px){.words{grid-template-columns:1fr 1fr}}
+.w{display:flex; align-items:center; gap:12px; min-height:68px; padding:6px 14px 6px 10px; border:3px solid var(--ink); border-radius:16px; background:var(--card); text-align:left; min-width:0}
+.w .ic{flex:0 0 46px; width:46px; height:46px}
+.w .ic svg{width:100%; height:100%; display:block}
+.w .t{flex:1 1 auto; min-width:0; white-space:nowrap; overflow:hidden; font-family:var(--brush); font-size:32px; line-height:1.2}
+.w.en{border-color:var(--red)}
+.w.en .t{font-family:var(--body); font-weight:700; color:var(--red)}
+.back{display:flex; align-items:center; justify-content:center; min-height:64px; width:100%; margin-top:6px; border:3px solid var(--ink); border-radius:16px; background:var(--ink); color:var(--paper); text-decoration:none; font-family:var(--brush); font-size:30px}
+</style></head><body><div class="wrap"><div class="pic" id="pic" role="img" aria-label="图画"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false" fill="none" stroke="#222" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><g transform="translate(2.3999999999999986 1.5) scale(0.9)"><path d="M24 16q-5-4-11-1-6 5-3 17 3 10 10 10 2 0 4-1 2 1 4 1 7 0 10-10 3-12-3-17-6-3-11 1z" fill="#fff"/><path d="M24 16q0-6 4-10M24 12q6-6 12-2-4 6-12 2"/></g></svg></div><div class="sq" id="sq"></div><div class="py" id="py" aria-hidden="true"></div><button type="button" class="big" id="big"></button><div class="vrow" id="vrow"><button type="button" class="vb" aria-label="one"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false" fill="none" stroke="#222" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><g transform="translate(2.3999999999999986 1.5) scale(0.9)"><path d="M24 16q-5-4-11-1-6 5-3 17 3 10 10 10 2 0 4-1 2 1 4 1 7 0 10-10 3-12-3-17-6-3-11 1z" fill="#fff"/><path d="M24 16q0-6 4-10M24 12q6-6 12-2-4 6-12 2"/></g></svg></button><button type="button" class="vb" aria-label="two"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false" fill="none" stroke="#222" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><g transform="translate(1 11.5) scale(0.5)"><path d="M24 16q-5-4-11-1-6 5-3 17 3 10 10 10 2 0 4-1 2 1 4 1 7 0 10-10 3-12-3-17-6-3-11 1z" fill="#fff"/><path d="M24 16q0-6 4-10M24 12q6-6 12-2-4 6-12 2"/></g><g transform="translate(23 11.5) scale(0.5)"><path d="M24 16q-5-4-11-1-6 5-3 17 3 10 10 10 2 0 4-1 2 1 4 1 7 0 10-10 3-12-3-17-6-3-11 1z" fill="#fff"/><path d="M24 16q0-6 4-10M24 12q6-6 12-2-4 6-12 2"/></g></svg></button><button type="button" class="vb" aria-label="three"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false" fill="none" stroke="#222" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><g transform="translate(13.2 1.75) scale(0.45)"><path d="M24 16q-5-4-11-1-6 5-3 17 3 10 10 10 2 0 4-1 2 1 4 1 7 0 10-10 3-12-3-17-6-3-11 1z" fill="#fff"/><path d="M24 16q0-6 4-10M24 12q6-6 12-2-4 6-12 2"/></g><g transform="translate(2.1999999999999993 23.75) scale(0.45)"><path d="M24 16q-5-4-11-1-6 5-3 17 3 10 10 10 2 0 4-1 2 1 4 1 7 0 10-10 3-12-3-17-6-3-11 1z" fill="#fff"/><path d="M24 16q0-6 4-10M24 12q6-6 12-2-4 6-12 2"/></g><g transform="translate(24.2 23.75) scale(0.45)"><path d="M24 16q-5-4-11-1-6 5-3 17 3 10 10 10 2 0 4-1 2 1 4 1 7 0 10-10 3-12-3-17-6-3-11 1z" fill="#fff"/><path d="M24 16q0-6 4-10M24 12q6-6 12-2-4 6-12 2"/></g></svg></button><button type="button" class="vb" aria-label="four"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false" fill="none" stroke="#222" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><g transform="translate(3.92 3.5) scale(0.42)"><path d="M24 16q-5-4-11-1-6 5-3 17 3 10 10 10 2 0 4-1 2 1 4 1 7 0 10-10 3-12-3-17-6-3-11 1z" fill="#fff"/><path d="M24 16q0-6 4-10M24 12q6-6 12-2-4 6-12 2"/></g><g transform="translate(23.92 3.5) scale(0.42)"><path d="M24 16q-5-4-11-1-6 5-3 17 3 10 10 10 2 0 4-1 2 1 4 1 7 0 10-10 3-12-3-17-6-3-11 1z" fill="#fff"/><path d="M24 16q0-6 4-10M24 12q6-6 12-2-4 6-12 2"/></g><g transform="translate(3.92 23.5) scale(0.42)"><path d="M24 16q-5-4-11-1-6 5-3 17 3 10 10 10 2 0 4-1 2 1 4 1 7 0 10-10 3-12-3-17-6-3-11 1z" fill="#fff"/><path d="M24 16q0-6 4-10M24 12q6-6 12-2-4 6-12 2"/></g><g transform="translate(23.92 23.5) scale(0.42)"><path d="M24 16q-5-4-11-1-6 5-3 17 3 10 10 10 2 0 4-1 2 1 4 1 7 0 10-10 3-12-3-17-6-3-11 1z" fill="#fff"/><path d="M24 16q0-6 4-10M24 12q6-6 12-2-4 6-12 2"/></g></svg></button><button type="button" class="vb" aria-label="five"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false" fill="none" stroke="#222" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><g transform="translate(2.879999999999999 2.5) scale(0.38)"><path d="M24 16q-5-4-11-1-6 5-3 17 3 10 10 10 2 0 4-1 2 1 4 1 7 0 10-10 3-12-3-17-6-3-11 1z" fill="#fff"/><path d="M24 16q0-6 4-10M24 12q6-6 12-2-4 6-12 2"/></g><g transform="translate(26.88 2.5) scale(0.38)"><path d="M24 16q-5-4-11-1-6 5-3 17 3 10 10 10 2 0 4-1 2 1 4 1 7 0 10-10 3-12-3-17-6-3-11 1z" fill="#fff"/><path d="M24 16q0-6 4-10M24 12q6-6 12-2-4 6-12 2"/></g><g transform="translate(14.879999999999999 14.5) scale(0.38)"><path d="M24 16q-5-4-11-1-6 5-3 17 3 10 10 10 2 0 4-1 2 1 4 1 7 0 10-10 3-12-3-17-6-3-11 1z" fill="#fff"/><path d="M24 16q0-6 4-10M24 12q6-6 12-2-4 6-12 2"/></g><g transform="translate(2.879999999999999 26.5) scale(0.38)"><path d="M24 16q-5-4-11-1-6 5-3 17 3 10 10 10 2 0 4-1 2 1 4 1 7 0 10-10 3-12-3-17-6-3-11 1z" fill="#fff"/><path d="M24 16q0-6 4-10M24 12q6-6 12-2-4 6-12 2"/></g><g transform="translate(26.88 26.5) scale(0.38)"><path d="M24 16q-5-4-11-1-6 5-3 17 3 10 10 10 2 0 4-1 2 1 4 1 7 0 10-10 3-12-3-17-6-3-11 1z" fill="#fff"/><path d="M24 16q0-6 4-10M24 12q6-6 12-2-4 6-12 2"/></g></svg></button></div><h2 class="gf">Good friends</h2><div class="words"><button type="button" class="w" data-zh="一个" data-en="one"><span class="ic"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false" fill="none" stroke="#222" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M24 16q-5-4-11-1-6 5-3 17 3 10 10 10 2 0 4-1 2 1 4 1 7 0 10-10 3-12-3-17-6-3-11 1z" fill="#fff"/><path d="M24 16q0-6 4-10M24 12q6-6 12-2-4 6-12 2"/></svg></span><span class="t">一个</span></button><button type="button" class="w" data-zh="一起" data-en="together"><span class="ic"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false" fill="none" stroke="#222" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="14" cy="12" r="5"/><circle cx="34" cy="12" r="5"/><path d="M14 17v14M34 17v14M14 23h20M14 31l-4 11M14 31l4 11M34 31l-4 11M34 31l4 11"/></svg></span><span class="t">一起</span></button><button type="button" class="w" data-zh="一半" data-en="half"><span class="ic"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false" fill="none" stroke="#222" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="18" fill="#fff"/><path d="M24 6a18 18 0 0 0 0 36z" fill="#222"/></svg></span><span class="t">一半</span></button><button type="button" class="w" data-zh="第一" data-en="first"><span class="ic"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false" fill="none" stroke="#222" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4l8 14 8-14"/><circle cx="24" cy="30" r="13" fill="#fff"/><path d="M21 28l3-3v12M20.500 37h7"/></svg></span><span class="t">第一</span></button></div><a class="back" href="./">回到诗</a></div><script>
+(function(){
+  var DATA={"一":{"s":["M 518 382 Q 572 385 623 389 Q 758 399 900 383 Q 928 379 935 390 Q 944 405 930 419 Q 896 452 845 475 Q 829 482 798 473 Q 723 460 480 434 Q 180 409 137 408 Q 130 408 124 408 Q 108 408 106 395 Q 105 380 127 363 Q 146 348 183 334 Q 195 330 216 338 Q 232 344 306 354 Q 400 373 518 382 Z"],"m":[[[121,393],[193,372],[417,402],[827,434],[920,401]]]},"二":{"s":["M 308 603 Q 260 597 293 574 Q 339 544 436 558 Q 551 576 673 596 Q 731 608 741 615 Q 753 625 747 636 Q 738 652 702 663 Q 669 672 559 641 Q 424 610 308 603 Z","M 517 212 Q 569 213 620 219 Q 756 229 896 214 Q 921 210 929 220 Q 938 235 924 248 Q 891 279 842 302 Q 826 309 797 301 Q 728 286 481 261 Q 172 236 155 234 Q 142 234 128 234 Q 113 234 111 221 Q 110 208 131 191 Q 150 176 185 163 Q 197 159 217 167 Q 233 173 306 183 Q 400 202 517 212 Z"],"m":[[[293,587],[386,581],[688,633],[733,629]],[[126,219],[195,200],[469,236],[823,263],[916,230]]]},"三":{"s":["M 326 667 Q 283 663 312 640 Q 369 610 428 623 Q 543 641 665 661 Q 720 671 729 678 Q 739 688 735 698 Q 728 711 693 722 Q 660 731 561 701 Q 420 673 326 667 Z","M 329 421 Q 304 417 332 392 Q 348 379 385 383 Q 557 405 685 416 Q 721 420 709 440 Q 694 462 657 472 Q 621 479 558 466 Q 435 441 329 421 Z","M 130 165 Q 102 162 122 139 Q 140 120 163 113 Q 191 104 212 110 Q 515 179 929 157 Q 930 158 933 157 Q 960 156 967 167 Q 974 183 953 201 Q 884 255 835 246 Q 643 210 130 165 Z"],"m":[[[316,655],[367,645],[416,648],[660,692],[722,692]],[[331,407],[375,405],[628,443],[657,443],[700,432]],[[127,152],[158,142],[195,139],[500,178],[846,204],[881,200],[955,174]]]},"四":{"s":["M 181 600 Q 160 612 138 618 Q 131 621 125 615 Q 115 608 127 596 Q 187 488 192 250 Q 193 186 231 153 Q 234 150 239 147 Q 258 141 260 176 Q 260 179 260 181 L 256 222 Q 255 237 233 382 Q 223 476 218 552 C 216 582 208 586 181 600 Z","M 717 200 Q 732 151 739 143 Q 746 131 756 132 Q 768 133 780 152 Q 822 206 870 461 Q 880 527 903 564 Q 916 579 914 589 Q 915 605 874 643 Q 825 691 790 679 Q 784 679 778 677 Q 756 673 680 666 Q 451 647 302 616 Q 220 604 181 600 C 151 597 189 543 218 552 Q 222 553 236 558 Q 294 576 370 589 L 410 596 Q 485 611 523 611 L 589 618 Q 686 630 773 631 Q 798 632 810 616 Q 825 603 823 571 Q 820 493 784 354 Q 759 245 748 231 Q 747 227 739 225 Q 733 226 726 230 C 709 223 709 223 717 200 Z","M 370 589 Q 391 546 349 422 Q 336 386 316 357 Q 306 341 296 326 Q 292 322 289 316 Q 286 307 295 308 Q 322 308 372 379 Q 408 436 424 507 Q 428 529 436 547 Q 443 559 439 570 Q 429 585 410 596 C 385 612 359 617 370 589 Z","M 523 611 Q 524 608 529 604 Q 545 585 545 536 Q 546 493 546 439 Q 545 384 570 366 Q 592 345 691 351 Q 725 352 735 368 Q 745 378 738 386 Q 731 393 634 397 Q 589 400 587 441 Q 581 502 605 588 Q 609 603 601 612 Q 597 616 589 618 C 562 631 504 634 523 611 Z","M 260 181 Q 270 180 283 180 Q 421 199 717 200 C 747 200 748 209 726 230 Q 693 269 620 252 Q 418 225 256 222 C 226 221 230 183 260 181 Z"],"m":[[[132,606],[163,582],[189,529],[224,229],[244,159]],[[187,595],[227,581],[466,625],[712,650],[801,654],[833,638],[866,588],[816,348],[781,226],[760,193],[755,149]],[[377,587],[408,560],[387,462],[351,379],[298,316]],[[530,611],[571,584],[566,446],[579,393],[608,377],[638,373],[699,371],[732,379]],[[263,216],[285,201],[651,229],[697,224],[706,211]]]},"五":{"s":["M 499 673 Q 590 688 686 701 Q 750 711 761 720 Q 771 729 767 738 Q 760 753 727 762 Q 693 772 598 744 Q 453 713 314 705 Q 272 701 301 680 Q 340 653 430 664 Q 440 665 452 667 L 499 673 Z","M 482 468 Q 494 520 507 568 Q 525 635 524 641 Q 512 660 499 673 C 479 695 448 697 452 667 Q 461 625 443 526 Q 436 499 428 460 L 419 421 Q 395 322 357 159 C 350 130 401 136 408 165 Q 442 307 472 429 L 482 468 Z","M 641 177 Q 678 360 738 416 Q 759 438 741 459 Q 722 475 661 505 Q 640 514 614 505 Q 545 481 482 468 L 428 460 Q 355 450 280 446 Q 261 446 262 434 Q 265 424 286 416 Q 314 401 357 413 Q 388 417 419 421 L 472 429 Q 527 439 584 446 Q 614 452 625 440 Q 643 421 637 384 Q 615 266 585 174 C 576 145 635 148 641 177 Z","M 357 159 Q 329 158 301 152 Q 159 130 72 134 Q 62 135 53 128 Q 46 121 52 110 Q 64 94 119 62 Q 134 55 156 64 Q 339 130 526 140 Q 670 152 937 99 Q 943 99 949 97 Q 970 93 977 103 Q 984 115 964 132 Q 883 199 844 191 Q 840 191 837 189 Q 807 183 641 177 L 585 174 Q 521 178 408 165 L 357 159 Z"],"m":[[[304,694],[343,685],[400,686],[704,735],[753,733]],[[460,663],[489,633],[483,587],[391,195],[375,174],[362,168]],[[273,435],[308,428],[345,430],[616,476],[654,467],[685,434],[619,200],[592,179]],[[63,118],[138,97],[419,149],[654,161],[855,153],[905,138],[966,110]]]}}, CFG={"base":"一","baseEn":"one","variants":{"kind":"pic","items":[{"ch":"一","en":"one","pic":"n1"},{"ch":"二","en":"two","pic":"n2"},{"ch":"三","en":"three","pic":"n3"},{"ch":"四","en":"four","pic":"n4"},{"ch":"五","en":"five","pic":"n5"}]},"variantStart":0,"pics":{"n1":"<svg viewBox=\"0 0 48 48\" aria-hidden=\"true\" focusable=\"false\" fill=\"none\" stroke=\"#222\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g transform=\"translate(2.3999999999999986 1.5) scale(0.9)\"><path d=\"M24 16q-5-4-11-1-6 5-3 17 3 10 10 10 2 0 4-1 2 1 4 1 7 0 10-10 3-12-3-17-6-3-11 1z\" fill=\"#fff\"/><path d=\"M24 16q0-6 4-10M24 12q6-6 12-2-4 6-12 2\"/></g></svg>","n2":"<svg viewBox=\"0 0 48 48\" aria-hidden=\"true\" focusable=\"false\" fill=\"none\" stroke=\"#222\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g transform=\"translate(1 11.5) scale(0.5)\"><path d=\"M24 16q-5-4-11-1-6 5-3 17 3 10 10 10 2 0 4-1 2 1 4 1 7 0 10-10 3-12-3-17-6-3-11 1z\" fill=\"#fff\"/><path d=\"M24 16q0-6 4-10M24 12q6-6 12-2-4 6-12 2\"/></g><g transform=\"translate(23 11.5) scale(0.5)\"><path d=\"M24 16q-5-4-11-1-6 5-3 17 3 10 10 10 2 0 4-1 2 1 4 1 7 0 10-10 3-12-3-17-6-3-11 1z\" fill=\"#fff\"/><path d=\"M24 16q0-6 4-10M24 12q6-6 12-2-4 6-12 2\"/></g></svg>","n3":"<svg viewBox=\"0 0 48 48\" aria-hidden=\"true\" focusable=\"false\" fill=\"none\" stroke=\"#222\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g transform=\"translate(13.2 1.75) scale(0.45)\"><path d=\"M24 16q-5-4-11-1-6 5-3 17 3 10 10 10 2 0 4-1 2 1 4 1 7 0 10-10 3-12-3-17-6-3-11 1z\" fill=\"#fff\"/><path d=\"M24 16q0-6 4-10M24 12q6-6 12-2-4 6-12 2\"/></g><g transform=\"translate(2.1999999999999993 23.75) scale(0.45)\"><path d=\"M24 16q-5-4-11-1-6 5-3 17 3 10 10 10 2 0 4-1 2 1 4 1 7 0 10-10 3-12-3-17-6-3-11 1z\" fill=\"#fff\"/><path d=\"M24 16q0-6 4-10M24 12q6-6 12-2-4 6-12 2\"/></g><g transform=\"translate(24.2 23.75) scale(0.45)\"><path d=\"M24 16q-5-4-11-1-6 5-3 17 3 10 10 10 2 0 4-1 2 1 4 1 7 0 10-10 3-12-3-17-6-3-11 1z\" fill=\"#fff\"/><path d=\"M24 16q0-6 4-10M24 12q6-6 12-2-4 6-12 2\"/></g></svg>","n4":"<svg viewBox=\"0 0 48 48\" aria-hidden=\"true\" focusable=\"false\" fill=\"none\" stroke=\"#222\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g transform=\"translate(3.92 3.5) scale(0.42)\"><path d=\"M24 16q-5-4-11-1-6 5-3 17 3 10 10 10 2 0 4-1 2 1 4 1 7 0 10-10 3-12-3-17-6-3-11 1z\" fill=\"#fff\"/><path d=\"M24 16q0-6 4-10M24 12q6-6 12-2-4 6-12 2\"/></g><g transform=\"translate(23.92 3.5) scale(0.42)\"><path d=\"M24 16q-5-4-11-1-6 5-3 17 3 10 10 10 2 0 4-1 2 1 4 1 7 0 10-10 3-12-3-17-6-3-11 1z\" fill=\"#fff\"/><path d=\"M24 16q0-6 4-10M24 12q6-6 12-2-4 6-12 2\"/></g><g transform=\"translate(3.92 23.5) scale(0.42)\"><path d=\"M24 16q-5-4-11-1-6 5-3 17 3 10 10 10 2 0 4-1 2 1 4 1 7 0 10-10 3-12-3-17-6-3-11 1z\" fill=\"#fff\"/><path d=\"M24 16q0-6 4-10M24 12q6-6 12-2-4 6-12 2\"/></g><g transform=\"translate(23.92 23.5) scale(0.42)\"><path d=\"M24 16q-5-4-11-1-6 5-3 17 3 10 10 10 2 0 4-1 2 1 4 1 7 0 10-10 3-12-3-17-6-3-11 1z\" fill=\"#fff\"/><path d=\"M24 16q0-6 4-10M24 12q6-6 12-2-4 6-12 2\"/></g></svg>","n5":"<svg viewBox=\"0 0 48 48\" aria-hidden=\"true\" focusable=\"false\" fill=\"none\" stroke=\"#222\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g transform=\"translate(2.879999999999999 2.5) scale(0.38)\"><path d=\"M24 16q-5-4-11-1-6 5-3 17 3 10 10 10 2 0 4-1 2 1 4 1 7 0 10-10 3-12-3-17-6-3-11 1z\" fill=\"#fff\"/><path d=\"M24 16q0-6 4-10M24 12q6-6 12-2-4 6-12 2\"/></g><g transform=\"translate(26.88 2.5) scale(0.38)\"><path d=\"M24 16q-5-4-11-1-6 5-3 17 3 10 10 10 2 0 4-1 2 1 4 1 7 0 10-10 3-12-3-17-6-3-11 1z\" fill=\"#fff\"/><path d=\"M24 16q0-6 4-10M24 12q6-6 12-2-4 6-12 2\"/></g><g transform=\"translate(14.879999999999999 14.5) scale(0.38)\"><path d=\"M24 16q-5-4-11-1-6 5-3 17 3 10 10 10 2 0 4-1 2 1 4 1 7 0 10-10 3-12-3-17-6-3-11 1z\" fill=\"#fff\"/><path d=\"M24 16q0-6 4-10M24 12q6-6 12-2-4 6-12 2\"/></g><g transform=\"translate(2.879999999999999 26.5) scale(0.38)\"><path d=\"M24 16q-5-4-11-1-6 5-3 17 3 10 10 10 2 0 4-1 2 1 4 1 7 0 10-10 3-12-3-17-6-3-11 1z\" fill=\"#fff\"/><path d=\"M24 16q0-6 4-10M24 12q6-6 12-2-4 6-12 2\"/></g><g transform=\"translate(26.88 26.5) scale(0.38)\"><path d=\"M24 16q-5-4-11-1-6 5-3 17 3 10 10 10 2 0 4-1 2 1 4 1 7 0 10-10 3-12-3-17-6-3-11 1z\" fill=\"#fff\"/><path d=\"M24 16q0-6 4-10M24 12q6-6 12-2-4 6-12 2\"/></g></svg>"},"py":{"一":"yī","二":"èr","三":"sān","四":"sì","五":"wǔ"}};
+  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var sq=document.getElementById('sq'), big=document.getElementById('big');
+  var picEl=document.getElementById('pic'), vrow=document.getElementById('vrow');
+  var cur={ch:CFG.base, en:CFG.baseEn, bg:'#fffdf6', ink:'#1d1d1b', fg:'#1d1d1b', outline:null, grid:'rgba(0,0,0,.16)'};
+  var showEn=false, raf=0, token=0;
+
+  function fit(el,max,min){
+    el.style.fontSize=max+'px';
+    var s=max;
+    while(el.scrollWidth>el.clientWidth+0.5 && s>min){ s-=1; el.style.fontSize=s+'px'; }
+  }
+  function updateBig(){
+    var py=document.getElementById('py'); py.textContent=CFG.py[cur.ch]||''; py.classList.toggle('hide',showEn);
+    big.textContent=showEn?cur.en:cur.ch;
+    big.className='big'+(showEn?' en':'');
+    big.style.color=cur.fg;
+    var o=cur.outline;
+    big.style.textShadow=o?'-2px 0 '+o+',2px 0 '+o+',0 -2px '+o+',0 2px '+o+',-2px -2px '+o+',2px 2px '+o+',-2px 2px '+o+',2px -2px '+o:'none';
+    if(showEn){ fit(big,64,18); } else { big.style.fontSize=''; }
+    big.setAttribute('aria-label',showEn?cur.en:cur.ch);
+  }
+  big.addEventListener('click',function(){ showEn=!showEn; updateBig(); });
+
+  function poly(m){
+    var pts=m.map(function(p){return [p[0],p[1]];});
+    function ext(a,b,d){ var dx=a[0]-b[0], dy=a[1]-b[1], l=Math.sqrt(dx*dx+dy*dy)||1; return [a[0]+dx/l*d, a[1]+dy/l*d]; }
+    if(pts.length>1){ pts[0]=ext(pts[0],pts[1],22); pts[pts.length-1]=ext(pts[pts.length-1],pts[pts.length-2],22); }
+    var len=0; for(var i=1;i<pts.length;i++){ var dx=pts[i][0]-pts[i-1][0], dy=pts[i][1]-pts[i-1][1]; len+=Math.sqrt(dx*dx+dy*dy); }
+    return {d:'M'+pts.map(function(p){return Math.round(p[0])+' '+Math.round(p[1]);}).join('L'), len:len};
+  }
+
+  function startWriting(){
+    token++; cancelAnimationFrame(raf);
+    var d=DATA[cur.ch]; if(!d) return;
+    var defs='', ghost='', strokes='', dur=[], start=[], t=0;
+    d.s.forEach(function(p,i){
+      var m=poly(d.m[i]);
+      defs+='<clipPath id="cp'+i+'"><path d="'+p+'"/></clipPath>';
+      ghost+='<path d="'+p+'"/>';
+      strokes+='<g clip-path="url(#cp'+i+')"><path class="mk" d="'+m.d+'" pathLength="1" fill="none" stroke="'+cur.ink+'" stroke-width="170" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1 2" stroke-dashoffset="'+(reduce?0:1)+'"/></g>';
+      dur.push(Math.max(380,Math.min(900,m.len*0.9))); start.push(t); t+=dur[i]+140;
+    });
+    sq.style.background=cur.bg;
+    sq.innerHTML='<svg viewBox="0 0 1024 1024" role="img" aria-label="'+cur.ch+'">'+
+      '<g stroke="'+cur.grid+'" stroke-width="5" stroke-dasharray="16 14" fill="none"><path d="M512 8V1016M8 512H1016M8 8L1016 1016M1016 8L8 1016"/></g>'+
+      '<g transform="scale(1,-1) translate(0,-900)"><defs>'+defs+'</defs>'+
+      '<g fill="'+cur.ink+'" opacity=".08">'+ghost+'</g><g class="gm">'+strokes+'</g></g></svg>';
+    if(reduce) return;
+    var marks=sq.querySelectorAll('.mk'), gm=sq.querySelector('.gm');
+    var writeEnd=t-140, HOLD=1300, FADE=450, PAUSE=350, total=writeEnd+HOLD+FADE+PAUSE;
+    var my=token, t0=performance.now();
+    function frame(now){
+      if(my!==token) return;
+      var e=(now-t0)%total;
+      for(var i=0;i<marks.length;i++){
+        var p=Math.max(0,Math.min(1,(e-start[i])/dur[i]));
+        p=1-Math.pow(1-p,1.6);
+        marks[i].setAttribute('stroke-dashoffset',String(1-p));
+      }
+      var f=e>writeEnd+HOLD?Math.max(0,1-(e-writeEnd-HOLD)/FADE):1;
+      gm.setAttribute('opacity',String(f));
+      raf=requestAnimationFrame(frame);
+    }
+    raf=requestAnimationFrame(frame);
+  }
+
+  function choose(i){
+    var it=CFG.variants.items[i];
+    cur.ch=it.ch; cur.en=it.en;
+    if(CFG.variants.kind==='color'){
+      cur.bg=it.bg; cur.ink=it.ink; cur.fg=it.fg; cur.outline=it.outline;
+      cur.grid=(it.ink==='#ffffff')?'rgba(255,255,255,.35)':'rgba(0,0,0,.16)';
+    } else {
+      picEl.innerHTML=CFG.pics[it.pic];
+    }
+    var bs=vrow.querySelectorAll('.vb');
+    for(var k=0;k<bs.length;k++){ bs[k].classList.toggle('on',k===i); bs[k].setAttribute('aria-pressed',k===i?'true':'false'); }
+    showEn=false; updateBig(); startWriting();
+  }
+  if(CFG.variants){
+    var bs=vrow.querySelectorAll('.vb');
+    for(var k=0;k<bs.length;k++){ (function(k){ bs[k].addEventListener('click',function(){ choose(k); }); })(k); }
+    choose(CFG.variantStart);
+  } else { updateBig(); startWriting(); }
+
+  var ws=document.querySelectorAll('.w');
+  function fitWord(b){ var t=b.querySelector('.t'); if(b.classList.contains('en')) fit(t,28,11); else t.style.fontSize=''; }
+  for(var i=0;i<ws.length;i++){ (function(b){
+    b.addEventListener('click',function(){
+      var on=b.classList.toggle('en');
+      b.querySelector('.t').textContent=on?b.getAttribute('data-en'):b.getAttribute('data-zh');
+      fitWord(b);
+    });
+  })(ws[i]); }
+  window.addEventListener('resize',function(){ for(var i=0;i<ws.length;i++) fitWord(ws[i]); if(showEn) updateBig(); });
+  if(document.fonts&&document.fonts.ready) document.fonts.ready.then(function(){ for(var i=0;i<ws.length;i++) fitWord(ws[i]); if(showEn) updateBig(); });
+})();
+</script></body></html>

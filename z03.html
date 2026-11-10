@@ -1,0 +1,147 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>撑 · 池上</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet"><style>
+:root{
+  --ink:#1d1d1b; --paper:#f4ecd8; --card:#fffdf6; --red:#c0392b;
+  --brush:'Ma Shan Zheng','KaiTi','STKaiti','Kaiti SC','Songti SC',serif;
+  --body:'Noto Serif SC','Songti SC','SimSun',Georgia,serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; color:var(--ink); font-family:var(--body);
+  background:
+    radial-gradient(ellipse at 20% 0%, rgba(255,255,255,.55), transparent 55%),
+    radial-gradient(ellipse at 90% 100%, rgba(190,160,110,.18), transparent 50%),
+    var(--paper);
+  min-height:100vh; -webkit-tap-highlight-color:transparent; overflow-x:hidden;
+}
+button{font:inherit; color:inherit; cursor:pointer; touch-action:manipulation}
+button:focus-visible,a:focus-visible{outline:4px solid #3578c6; outline-offset:3px}
+.wrap{max-width:560px; margin:0 auto; padding:16px 16px 44px; display:flex; flex-direction:column; align-items:center; gap:20px}
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation:none!important; transition-duration:.01ms!important; scroll-behavior:auto!important}
+}
+
+.pic{width:min(78vw,320px); aspect-ratio:16/9; border:3px solid var(--ink); border-radius:14px; background:var(--card); display:grid; place-items:center}
+.pic svg{height:88%; width:auto; display:block; stroke-width:1.3}
+.sq{width:min(78vw,320px); aspect-ratio:1; border:3px solid var(--ink); border-radius:6px; background:var(--card); transition:background .3s}
+.sq svg{display:block; width:100%; height:100%}
+.py{margin:0 0 -16px; min-height:1.3em; font-family:var(--body); font-weight:700; font-size:34px; line-height:1.3; letter-spacing:.04em; text-align:center; color:var(--ink)}
+.py.hide{visibility:hidden}
+.big{width:100%; min-height:150px; border:0; background:transparent; padding:0; line-height:1.15;
+  font-family:var(--brush); font-size:124px; color:var(--ink); white-space:nowrap; overflow:hidden; text-align:center}
+.big.en{font-family:var(--body); font-weight:700}
+.vrow{display:flex; gap:8px; width:100%; justify-content:center}
+.vb{flex:1 1 0; min-width:0; max-width:76px; height:64px; border:3px solid var(--ink); border-radius:12px; background:var(--card); padding:4px; display:grid; place-items:center}
+.vb svg{width:100%; height:100%; display:block}
+.vb.on{box-shadow:0 0 0 3px var(--paper), 0 0 0 6px var(--ink)}
+.gf{margin:4px 0 -6px; font-family:var(--body); font-size:22px; font-weight:700; letter-spacing:.04em; align-self:flex-start}
+.words{display:grid; grid-template-columns:1fr; gap:12px; width:100%}
+@media (min-width:520px){.words{grid-template-columns:1fr 1fr}}
+.w{display:flex; align-items:center; gap:12px; min-height:68px; padding:6px 14px 6px 10px; border:3px solid var(--ink); border-radius:16px; background:var(--card); text-align:left; min-width:0}
+.w .ic{flex:0 0 46px; width:46px; height:46px}
+.w .ic svg{width:100%; height:100%; display:block}
+.w .t{flex:1 1 auto; min-width:0; white-space:nowrap; overflow:hidden; font-family:var(--brush); font-size:32px; line-height:1.2}
+.w.en{border-color:var(--red)}
+.w.en .t{font-family:var(--body); font-weight:700; color:var(--red)}
+.back{display:flex; align-items:center; justify-content:center; min-height:64px; width:100%; margin-top:6px; border:3px solid var(--ink); border-radius:16px; background:var(--ink); color:var(--paper); text-decoration:none; font-family:var(--brush); font-size:30px}
+</style></head><body><div class="wrap"><div class="sq" id="sq"></div><div class="py" id="py" aria-hidden="true"></div><button type="button" class="big" id="big"></button><h2 class="gf">Good friends</h2><div class="words"><button type="button" class="w" data-zh="撑伞" data-en="umbrella"><span class="ic"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false" fill="none" stroke="#222" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 25Q5 8 24 8t19 17q-4-4-9.5-4T24 25q-4-4-9.5-4T5 25z" fill="#fff"/><path d="M24 8V5M24 25v12q0 5 5 5t5-5"/></svg></span><span class="t">撑伞</span></button><button type="button" class="w" data-zh="撑船" data-en="boat"><span class="ic"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false" fill="none" stroke="#222" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 30h36l-6 10H12z" fill="#fff"/><path d="M24 30V8"/><path d="M24 10l12 18H24z" fill="#fff"/><path d="M4 44q5-3 10 0t10 0t10 0t10 0"/></svg></span><span class="t">撑船</span></button><button type="button" class="w" data-zh="撑开" data-en="open"><span class="ic"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false" fill="none" stroke="#222" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M24 8v32M8 24h32"/><path d="M19 13l5-5 5 5M19 35l5 5 5-5M13 19l-5 5 5 5M35 19l5 5-5 5"/></svg></span><span class="t">撑开</span></button></div><a class="back" href="./">回到诗</a></div><script>
+(function(){
+  var DATA={"撑":{"s":["M 307 555 Q 364 576 365 577 Q 372 584 368 593 Q 361 603 331 608 Q 318 609 308 608 L 260 591 Q 169 561 122 553 Q 88 544 114 530 Q 150 515 219 531 Q 237 537 260 542 L 307 555 Z","M 258 350 Q 257 262 257 149 Q 256 125 244 117 Q 238 114 180 126 Q 149 139 151 129 Q 152 122 170 107 Q 227 58 240 30 Q 256 -1 270 -4 Q 285 -5 299 28 Q 317 71 316 143 Q 309 269 306 393 L 306 424 Q 305 491 307 555 L 308 608 Q 308 693 325 755 Q 341 783 288 805 Q 255 823 237 816 Q 221 810 236 788 Q 257 763 258 729 Q 259 713 260 591 L 260 542 Q 259 479 258 393 L 258 350 Z","M 258 393 Q 47 255 45 248 Q 45 239 59 227 Q 78 214 102 207 Q 117 204 126 217 Q 187 289 258 350 L 306 393 Q 363 445 365 448 Q 371 461 360 460 Q 354 460 306 424 L 258 393 Z","M 642 649 Q 651 752 667 795 Q 670 805 653 817 Q 625 832 606 836 Q 593 839 586 832 Q 579 826 586 814 Q 604 793 607 643 C 608 613 639 619 642 649 Z","M 490 707 Q 505 692 520 675 Q 532 665 544 665 Q 553 666 557 677 Q 561 689 554 713 Q 550 726 529 735 Q 477 750 468 747 Q 464 743 465 733 Q 468 724 490 707 Z","M 747 767 Q 728 742 689 703 Q 683 697 687 691 Q 693 690 700 692 Q 773 729 807 742 Q 823 745 820 754 Q 805 799 769 807 Q 756 808 755 791 Q 756 779 747 767 Z","M 456 619 Q 438 644 433 647 Q 429 651 424 648 Q 420 644 418 634 Q 422 604 391 541 Q 381 526 382 509 Q 385 491 393 478 Q 400 468 405 474 Q 417 477 433 521 Q 443 551 462 587 C 469 601 469 601 456 619 Z","M 462 587 Q 477 583 494 586 Q 615 628 776 642 Q 794 645 802 643 Q 817 633 814 626 Q 814 625 797 569 Q 791 556 797 553 Q 804 549 818 560 Q 863 591 900 600 Q 930 610 929 617 Q 928 626 863 670 Q 839 688 721 662 Q 717 662 642 649 L 607 643 Q 570 639 529 631 Q 492 624 456 619 C 426 615 432 591 462 587 Z","M 539 547 Q 530 551 504 556 Q 495 557 492 554 Q 488 550 494 536 Q 510 508 523 457 Q 526 442 535 433 Q 548 417 553 428 Q 556 435 556 445 L 553 473 Q 549 510 548 524 C 546 544 546 544 539 547 Z","M 725 494 Q 738 521 758 532 Q 771 547 760 561 Q 700 607 653 581 Q 581 557 539 547 C 510 540 518 519 548 524 Q 554 524 669 551 Q 679 554 685 549 Q 689 545 688 535 Q 684 519 680 503 C 673 474 711 467 725 494 Z","M 556 445 Q 563 444 573 446 Q 622 458 730 470 Q 739 471 740 478 Q 740 484 725 494 L 680 503 Q 676 503 673 502 Q 604 483 553 473 C 524 467 526 447 556 445 Z","M 619 354 Q 686 375 726 379 Q 739 378 743 383 Q 747 390 738 401 Q 696 440 670 439 Q 664 438 663 429 Q 657 396 482 341 Q 478 335 481 332 Q 484 332 588 348 L 619 354 Z","M 667 265 Q 778 292 779 292 Q 786 299 782 306 Q 776 316 751 323 Q 724 327 664 306 L 611 292 Q 557 283 496 276 Q 465 272 487 256 Q 526 235 573 247 Q 592 251 618 255 L 667 265 Z","M 673 182 Q 724 186 900 187 Q 918 187 923 195 Q 927 205 912 219 Q 857 261 812 243 Q 755 233 671 219 L 622 212 Q 505 197 368 181 Q 349 180 362 163 Q 375 150 392 145 Q 411 139 427 144 Q 515 168 625 178 L 673 182 Z","M 625 178 Q 629 82 613 52 Q 612 48 607 46 Q 595 40 512 56 Q 505 56 502 53 Q 501 49 509 41 Q 569 -7 600 -43 Q 610 -55 617 -53 Q 626 -53 640 -39 Q 674 -2 676 101 Q 673 161 673 182 L 671 219 Q 668 252 667 265 L 664 306 Q 664 330 652 338 Q 634 348 619 354 C 592 366 571 372 588 348 Q 603 333 611 292 L 618 255 Q 619 236 622 212 L 625 178 Z"],"m":[[[115,542],[134,539],[186,546],[324,586],[359,585]],[[244,802],[285,771],[290,757],[282,509],[286,134],[280,104],[265,76],[157,127]],[[51,245],[103,245],[192,324],[360,453]],[[596,823],[630,790],[625,665],[611,656]],[[472,739],[529,705],[542,681]],[[768,794],[781,764],[693,696]],[[427,638],[437,616],[436,589],[405,513],[402,485]],[[464,615],[473,606],[486,604],[647,636],[655,642],[663,639],[760,657],[816,658],[839,648],[855,627],[802,559]],[[499,549],[526,522],[545,434]],[[546,543],[556,538],[666,569],[690,570],[710,560],[721,545],[712,523],[689,507]],[[560,453],[570,461],[669,483],[732,478]],[[743.75,391],[487,338]],[[489,267],[548,262],[676,286],[713,299],[745,304],[776,300]],[[366,172],[417,164],[587,192],[835,218],[877,213],[913,200]],[[596,347],[617,336],[635,315],[640,284],[651,109],[642,42],[630,18],[614,4],[509,49]]]}}, CFG={"base":"撑","baseEn":"pole","variants":null,"variantStart":0,"pics":{},"py":{"撑":"chēng"}};
+  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var sq=document.getElementById('sq'), big=document.getElementById('big');
+  var picEl=document.getElementById('pic'), vrow=document.getElementById('vrow');
+  var cur={ch:CFG.base, en:CFG.baseEn, bg:'#fffdf6', ink:'#1d1d1b', fg:'#1d1d1b', outline:null, grid:'rgba(0,0,0,.16)'};
+  var showEn=false, raf=0, token=0;
+
+  function fit(el,max,min){
+    el.style.fontSize=max+'px';
+    var s=max;
+    while(el.scrollWidth>el.clientWidth+0.5 && s>min){ s-=1; el.style.fontSize=s+'px'; }
+  }
+  function updateBig(){
+    var py=document.getElementById('py'); py.textContent=CFG.py[cur.ch]||''; py.classList.toggle('hide',showEn);
+    big.textContent=showEn?cur.en:cur.ch;
+    big.className='big'+(showEn?' en':'');
+    big.style.color=cur.fg;
+    var o=cur.outline;
+    big.style.textShadow=o?'-2px 0 '+o+',2px 0 '+o+',0 -2px '+o+',0 2px '+o+',-2px -2px '+o+',2px 2px '+o+',-2px 2px '+o+',2px -2px '+o:'none';
+    if(showEn){ fit(big,64,18); } else { big.style.fontSize=''; }
+    big.setAttribute('aria-label',showEn?cur.en:cur.ch);
+  }
+  big.addEventListener('click',function(){ showEn=!showEn; updateBig(); });
+
+  function poly(m){
+    var pts=m.map(function(p){return [p[0],p[1]];});
+    function ext(a,b,d){ var dx=a[0]-b[0], dy=a[1]-b[1], l=Math.sqrt(dx*dx+dy*dy)||1; return [a[0]+dx/l*d, a[1]+dy/l*d]; }
+    if(pts.length>1){ pts[0]=ext(pts[0],pts[1],22); pts[pts.length-1]=ext(pts[pts.length-1],pts[pts.length-2],22); }
+    var len=0; for(var i=1;i<pts.length;i++){ var dx=pts[i][0]-pts[i-1][0], dy=pts[i][1]-pts[i-1][1]; len+=Math.sqrt(dx*dx+dy*dy); }
+    return {d:'M'+pts.map(function(p){return Math.round(p[0])+' '+Math.round(p[1]);}).join('L'), len:len};
+  }
+
+  function startWriting(){
+    token++; cancelAnimationFrame(raf);
+    var d=DATA[cur.ch]; if(!d) return;
+    var defs='', ghost='', strokes='', dur=[], start=[], t=0;
+    d.s.forEach(function(p,i){
+      var m=poly(d.m[i]);
+      defs+='<clipPath id="cp'+i+'"><path d="'+p+'"/></clipPath>';
+      ghost+='<path d="'+p+'"/>';
+      strokes+='<g clip-path="url(#cp'+i+')"><path class="mk" d="'+m.d+'" pathLength="1" fill="none" stroke="'+cur.ink+'" stroke-width="170" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1 2" stroke-dashoffset="'+(reduce?0:1)+'"/></g>';
+      dur.push(Math.max(380,Math.min(900,m.len*0.9))); start.push(t); t+=dur[i]+140;
+    });
+    sq.style.background=cur.bg;
+    sq.innerHTML='<svg viewBox="0 0 1024 1024" role="img" aria-label="'+cur.ch+'">'+
+      '<g stroke="'+cur.grid+'" stroke-width="5" stroke-dasharray="16 14" fill="none"><path d="M512 8V1016M8 512H1016M8 8L1016 1016M1016 8L8 1016"/></g>'+
+      '<g transform="scale(1,-1) translate(0,-900)"><defs>'+defs+'</defs>'+
+      '<g fill="'+cur.ink+'" opacity=".08">'+ghost+'</g><g class="gm">'+strokes+'</g></g></svg>';
+    if(reduce) return;
+    var marks=sq.querySelectorAll('.mk'), gm=sq.querySelector('.gm');
+    var writeEnd=t-140, HOLD=1300, FADE=450, PAUSE=350, total=writeEnd+HOLD+FADE+PAUSE;
+    var my=token, t0=performance.now();
+    function frame(now){
+      if(my!==token) return;
+      var e=(now-t0)%total;
+      for(var i=0;i<marks.length;i++){
+        var p=Math.max(0,Math.min(1,(e-start[i])/dur[i]));
+        p=1-Math.pow(1-p,1.6);
+        marks[i].setAttribute('stroke-dashoffset',String(1-p));
+      }
+      var f=e>writeEnd+HOLD?Math.max(0,1-(e-writeEnd-HOLD)/FADE):1;
+      gm.setAttribute('opacity',String(f));
+      raf=requestAnimationFrame(frame);
+    }
+    raf=requestAnimationFrame(frame);
+  }
+
+  function choose(i){
+    var it=CFG.variants.items[i];
+    cur.ch=it.ch; cur.en=it.en;
+    if(CFG.variants.kind==='color'){
+      cur.bg=it.bg; cur.ink=it.ink; cur.fg=it.fg; cur.outline=it.outline;
+      cur.grid=(it.ink==='#ffffff')?'rgba(255,255,255,.35)':'rgba(0,0,0,.16)';
+    } else {
+      picEl.innerHTML=CFG.pics[it.pic];
+    }
+    var bs=vrow.querySelectorAll('.vb');
+    for(var k=0;k<bs.length;k++){ bs[k].classList.toggle('on',k===i); bs[k].setAttribute('aria-pressed',k===i?'true':'false'); }
+    showEn=false; updateBig(); startWriting();
+  }
+  if(CFG.variants){
+    var bs=vrow.querySelectorAll('.vb');
+    for(var k=0;k<bs.length;k++){ (function(k){ bs[k].addEventListener('click',function(){ choose(k); }); })(k); }
+    choose(CFG.variantStart);
+  } else { updateBig(); startWriting(); }
+
+  var ws=document.querySelectorAll('.w');
+  function fitWord(b){ var t=b.querySelector('.t'); if(b.classList.contains('en')) fit(t,28,11); else t.style.fontSize=''; }
+  for(var i=0;i<ws.length;i++){ (function(b){
+    b.addEventListener('click',function(){
+      var on=b.classList.toggle('en');
+      b.querySelector('.t').textContent=on?b.getAttribute('data-en'):b.getAttribute('data-zh');
+      fitWord(b);
+    });
+  })(ws[i]); }
+  window.addEventListener('resize',function(){ for(var i=0;i<ws.length;i++) fitWord(ws[i]); if(showEn) updateBig(); });
+  if(document.fonts&&document.fonts.ready) document.fonts.ready.then(function(){ for(var i=0;i<ws.length;i++) fitWord(ws[i]); if(showEn) updateBig(); });
+})();
+</script></body></html>

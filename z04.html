@@ -1,0 +1,147 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>艇 · 池上</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet"><style>
+:root{
+  --ink:#1d1d1b; --paper:#f4ecd8; --card:#fffdf6; --red:#c0392b;
+  --brush:'Ma Shan Zheng','KaiTi','STKaiti','Kaiti SC','Songti SC',serif;
+  --body:'Noto Serif SC','Songti SC','SimSun',Georgia,serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; color:var(--ink); font-family:var(--body);
+  background:
+    radial-gradient(ellipse at 20% 0%, rgba(255,255,255,.55), transparent 55%),
+    radial-gradient(ellipse at 90% 100%, rgba(190,160,110,.18), transparent 50%),
+    var(--paper);
+  min-height:100vh; -webkit-tap-highlight-color:transparent; overflow-x:hidden;
+}
+button{font:inherit; color:inherit; cursor:pointer; touch-action:manipulation}
+button:focus-visible,a:focus-visible{outline:4px solid #3578c6; outline-offset:3px}
+.wrap{max-width:560px; margin:0 auto; padding:16px 16px 44px; display:flex; flex-direction:column; align-items:center; gap:20px}
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation:none!important; transition-duration:.01ms!important; scroll-behavior:auto!important}
+}
+
+.pic{width:min(78vw,320px); aspect-ratio:16/9; border:3px solid var(--ink); border-radius:14px; background:var(--card); display:grid; place-items:center}
+.pic svg{height:88%; width:auto; display:block; stroke-width:1.3}
+.sq{width:min(78vw,320px); aspect-ratio:1; border:3px solid var(--ink); border-radius:6px; background:var(--card); transition:background .3s}
+.sq svg{display:block; width:100%; height:100%}
+.py{margin:0 0 -16px; min-height:1.3em; font-family:var(--body); font-weight:700; font-size:34px; line-height:1.3; letter-spacing:.04em; text-align:center; color:var(--ink)}
+.py.hide{visibility:hidden}
+.big{width:100%; min-height:150px; border:0; background:transparent; padding:0; line-height:1.15;
+  font-family:var(--brush); font-size:124px; color:var(--ink); white-space:nowrap; overflow:hidden; text-align:center}
+.big.en{font-family:var(--body); font-weight:700}
+.vrow{display:flex; gap:8px; width:100%; justify-content:center}
+.vb{flex:1 1 0; min-width:0; max-width:76px; height:64px; border:3px solid var(--ink); border-radius:12px; background:var(--card); padding:4px; display:grid; place-items:center}
+.vb svg{width:100%; height:100%; display:block}
+.vb.on{box-shadow:0 0 0 3px var(--paper), 0 0 0 6px var(--ink)}
+.gf{margin:4px 0 -6px; font-family:var(--body); font-size:22px; font-weight:700; letter-spacing:.04em; align-self:flex-start}
+.words{display:grid; grid-template-columns:1fr; gap:12px; width:100%}
+@media (min-width:520px){.words{grid-template-columns:1fr 1fr}}
+.w{display:flex; align-items:center; gap:12px; min-height:68px; padding:6px 14px 6px 10px; border:3px solid var(--ink); border-radius:16px; background:var(--card); text-align:left; min-width:0}
+.w .ic{flex:0 0 46px; width:46px; height:46px}
+.w .ic svg{width:100%; height:100%; display:block}
+.w .t{flex:1 1 auto; min-width:0; white-space:nowrap; overflow:hidden; font-family:var(--brush); font-size:32px; line-height:1.2}
+.w.en{border-color:var(--red)}
+.w.en .t{font-family:var(--body); font-weight:700; color:var(--red)}
+.back{display:flex; align-items:center; justify-content:center; min-height:64px; width:100%; margin-top:6px; border:3px solid var(--ink); border-radius:16px; background:var(--ink); color:var(--paper); text-decoration:none; font-family:var(--brush); font-size:30px}
+</style></head><body><div class="wrap"><div class="sq" id="sq"></div><div class="py" id="py" aria-hidden="true"></div><button type="button" class="big" id="big"></button><h2 class="gf">Good friends</h2><div class="words"><button type="button" class="w" data-zh="小艇" data-en="boat"><span class="ic"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false" fill="none" stroke="#222" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 30h36l-6 10H12z" fill="#fff"/><path d="M24 30V8"/><path d="M24 10l12 18H24z" fill="#fff"/><path d="M4 44q5-3 10 0t10 0t10 0t10 0"/></svg></span><span class="t">小艇</span></button><button type="button" class="w" data-zh="快艇" data-en="speedboat"><span class="ic"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false" fill="none" stroke="#222" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 28h10l6-8h8l4 8h8l-5 10H12z" fill="#fff"/><path d="M2 43q5-3 10 0t10 0t10 0t10 0"/><path d="M2 20h6M0 26h4"/></svg></span><span class="t">快艇</span></button><button type="button" class="w" data-zh="潜艇" data-en="submarine"><span class="ic"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false" fill="none" stroke="#222" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="22" width="34" height="14" rx="7" fill="#fff"/><path d="M19 22v-6h8v6M25 16h6"/><circle cx="15" cy="29" r="2.4"/><circle cx="23" cy="29" r="2.4"/><circle cx="31" cy="29" r="2.4"/><path d="M39 26l5-3v12l-5-3"/><path d="M8 44q4-2 8 0t8 0"/></svg></span><span class="t">潜艇</span></button></div><a class="back" href="./">回到诗</a></div><script>
+(function(){
+  var DATA={"艇":{"s":["M 247 632 Q 281 674 303 702 Q 342 766 371 789 Q 387 804 374 817 Q 358 829 329 835 Q 304 841 293 835 Q 283 831 290 819 Q 299 795 243 671 Q 234 655 225 633 C 213 605 228 609 247 632 Z","M 225 633 Q 218 639 206 642 Q 190 649 178 645 Q 168 638 175 627 Q 190 611 197 551 Q 196 458 193 363 L 187 318 Q 159 168 80 27 Q 76 21 75 16 Q 74 6 82 9 Q 94 12 126 59 Q 198 155 231 332 L 236 372 Q 236 588 251 602 C 256 618 252 620 225 633 Z","M 409 103 Q 397 271 397 533 Q 394 585 407 608 Q 417 626 406 635 Q 387 651 354 664 Q 338 671 323 664 Q 298 648 282 642 Q 269 638 247 632 C 217 624 197 584 251 602 Q 290 615 315 622 Q 333 626 338 618 Q 348 590 353 398 L 354 373 Q 355 97 342 76 Q 336 72 274 83 Q 255 89 257 80 Q 306 38 336 7 Q 348 -9 362 -14 Q 369 -17 378 -8 Q 408 34 410 92 L 409 103 Z","M 263 521 Q 281 460 301 451 Q 311 447 320 458 Q 324 467 324 485 Q 321 498 306 511 Q 284 533 274 539 Q 267 543 264 535 Q 260 529 263 521 Z","M 193 363 Q 147 356 100 346 Q 81 342 50 345 Q 38 345 35 336 Q 32 324 40 316 Q 59 300 87 280 Q 97 276 108 283 Q 145 305 187 318 L 231 332 Q 280 348 331 365 Q 341 369 354 373 C 383 382 382 404 353 398 Q 298 386 236 372 L 193 363 Z","M 255 283 Q 289 222 311 216 Q 323 213 330 228 Q 334 238 328 258 Q 316 288 263 306 Q 256 309 253 299 Q 250 292 255 283 Z","M 745 590 Q 790 617 844 630 Q 860 631 863 639 Q 866 649 854 659 Q 835 672 793 685 Q 778 692 766 690 Q 759 686 759 676 Q 760 640 604 555 Q 600 546 605 544 Q 623 544 712 577 L 745 590 Z","M 766 420 Q 793 427 882 443 Q 892 442 898 453 Q 899 463 879 471 Q 852 490 768 459 L 724 446 Q 694 440 667 435 Q 639 431 606 425 Q 582 421 602 407 Q 629 389 667 397 Q 692 404 724 410 L 766 420 Z","M 760 281 Q 763 356 766 420 L 768 459 Q 771 567 772 567 L 771 568 Q 758 581 745 590 C 721 608 702 605 712 577 Q 724 550 724 446 L 724 410 Q 723 355 722 273 C 722 243 759 251 760 281 Z","M 722 273 Q 713 273 628 263 Q 601 260 622 243 Q 649 222 695 228 Q 806 249 874 252 Q 884 251 893 263 Q 894 273 872 284 Q 844 305 764 282 Q 761 282 760 281 L 722 273 Z","M 519 387 Q 531 354 496 262 L 484 232 Q 439 133 409 103 C 390 80 386 76 410 92 Q 411 89 419 97 Q 480 145 516 214 L 530 246 Q 543 283 556 323 Q 569 378 580 394 Q 587 404 580 412 Q 568 422 554 425 Q 541 429 520 422 Q 501 415 495 418 Q 491 421 496 432 Q 517 475 537 523 Q 553 554 567 569 Q 583 585 571 596 Q 561 605 531 615 Q 509 625 494 611 Q 454 580 423 570 Q 410 566 418 559 Q 436 547 487 567 Q 497 570 501 564 Q 507 554 495 515 Q 477 449 459 428 Q 449 415 454 403 Q 458 396 477 398 Q 513 404 519 387 Z","M 496 262 Q 469 272 432 263 Q 423 259 428 251 Q 434 244 444 243 Q 463 242 484 232 L 516 214 Q 535 201 557 185 Q 675 80 769 42 Q 814 32 964 74 Q 974 78 976 87 Q 979 96 959 95 Q 910 102 853 105 Q 747 115 551 233 Q 544 239 536 242 Q 532 245 530 246 L 496 262 Z"],"m":[[[296,826],[309,820],[326,795],[270,686],[242,643],[231,639]],[[184,635],[208,616],[218,597],[217,413],[210,327],[166,168],[132,94],[82,16]],[[230,629],[258,620],[335,645],[352,639],[374,616],[376,72],[359,40],[266,78]],[[272,528],[297,491],[306,466]],[[48,331],[96,313],[332,379],[347,392]],[[264,294],[300,257],[314,232]],[[853,643],[788,650],[695,586],[664,576],[655,567],[617,559],[608,550]],[[602,416],[669,416],[840,457],[888,454]],[[719,576],[742,560],[747,523],[743,306],[738,291],[727,282]],[[623,254],[658,247],[700,249],[842,272],[883,265]],[[425,563],[501,588],[516,589],[531,579],[513,509],[475,417],[487,407],[515,409],[541,401],[547,389],[541,338],[502,226],[467,165],[413,98]],[[437,255],[477,252],[524,230],[667,135],[780,80],[835,75],[967,87]]]}}, CFG={"base":"艇","baseEn":"boat","variants":null,"variantStart":0,"pics":{},"py":{"艇":"tǐng"}};
+  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var sq=document.getElementById('sq'), big=document.getElementById('big');
+  var picEl=document.getElementById('pic'), vrow=document.getElementById('vrow');
+  var cur={ch:CFG.base, en:CFG.baseEn, bg:'#fffdf6', ink:'#1d1d1b', fg:'#1d1d1b', outline:null, grid:'rgba(0,0,0,.16)'};
+  var showEn=false, raf=0, token=0;
+
+  function fit(el,max,min){
+    el.style.fontSize=max+'px';
+    var s=max;
+    while(el.scrollWidth>el.clientWidth+0.5 && s>min){ s-=1; el.style.fontSize=s+'px'; }
+  }
+  function updateBig(){
+    var py=document.getElementById('py'); py.textContent=CFG.py[cur.ch]||''; py.classList.toggle('hide',showEn);
+    big.textContent=showEn?cur.en:cur.ch;
+    big.className='big'+(showEn?' en':'');
+    big.style.color=cur.fg;
+    var o=cur.outline;
+    big.style.textShadow=o?'-2px 0 '+o+',2px 0 '+o+',0 -2px '+o+',0 2px '+o+',-2px -2px '+o+',2px 2px '+o+',-2px 2px '+o+',2px -2px '+o:'none';
+    if(showEn){ fit(big,64,18); } else { big.style.fontSize=''; }
+    big.setAttribute('aria-label',showEn?cur.en:cur.ch);
+  }
+  big.addEventListener('click',function(){ showEn=!showEn; updateBig(); });
+
+  function poly(m){
+    var pts=m.map(function(p){return [p[0],p[1]];});
+    function ext(a,b,d){ var dx=a[0]-b[0], dy=a[1]-b[1], l=Math.sqrt(dx*dx+dy*dy)||1; return [a[0]+dx/l*d, a[1]+dy/l*d]; }
+    if(pts.length>1){ pts[0]=ext(pts[0],pts[1],22); pts[pts.length-1]=ext(pts[pts.length-1],pts[pts.length-2],22); }
+    var len=0; for(var i=1;i<pts.length;i++){ var dx=pts[i][0]-pts[i-1][0], dy=pts[i][1]-pts[i-1][1]; len+=Math.sqrt(dx*dx+dy*dy); }
+    return {d:'M'+pts.map(function(p){return Math.round(p[0])+' '+Math.round(p[1]);}).join('L'), len:len};
+  }
+
+  function startWriting(){
+    token++; cancelAnimationFrame(raf);
+    var d=DATA[cur.ch]; if(!d) return;
+    var defs='', ghost='', strokes='', dur=[], start=[], t=0;
+    d.s.forEach(function(p,i){
+      var m=poly(d.m[i]);
+      defs+='<clipPath id="cp'+i+'"><path d="'+p+'"/></clipPath>';
+      ghost+='<path d="'+p+'"/>';
+      strokes+='<g clip-path="url(#cp'+i+')"><path class="mk" d="'+m.d+'" pathLength="1" fill="none" stroke="'+cur.ink+'" stroke-width="170" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1 2" stroke-dashoffset="'+(reduce?0:1)+'"/></g>';
+      dur.push(Math.max(380,Math.min(900,m.len*0.9))); start.push(t); t+=dur[i]+140;
+    });
+    sq.style.background=cur.bg;
+    sq.innerHTML='<svg viewBox="0 0 1024 1024" role="img" aria-label="'+cur.ch+'">'+
+      '<g stroke="'+cur.grid+'" stroke-width="5" stroke-dasharray="16 14" fill="none"><path d="M512 8V1016M8 512H1016M8 8L1016 1016M1016 8L8 1016"/></g>'+
+      '<g transform="scale(1,-1) translate(0,-900)"><defs>'+defs+'</defs>'+
+      '<g fill="'+cur.ink+'" opacity=".08">'+ghost+'</g><g class="gm">'+strokes+'</g></g></svg>';
+    if(reduce) return;
+    var marks=sq.querySelectorAll('.mk'), gm=sq.querySelector('.gm');
+    var writeEnd=t-140, HOLD=1300, FADE=450, PAUSE=350, total=writeEnd+HOLD+FADE+PAUSE;
+    var my=token, t0=performance.now();
+    function frame(now){
+      if(my!==token) return;
+      var e=(now-t0)%total;
+      for(var i=0;i<marks.length;i++){
+        var p=Math.max(0,Math.min(1,(e-start[i])/dur[i]));
+        p=1-Math.pow(1-p,1.6);
+        marks[i].setAttribute('stroke-dashoffset',String(1-p));
+      }
+      var f=e>writeEnd+HOLD?Math.max(0,1-(e-writeEnd-HOLD)/FADE):1;
+      gm.setAttribute('opacity',String(f));
+      raf=requestAnimationFrame(frame);
+    }
+    raf=requestAnimationFrame(frame);
+  }
+
+  function choose(i){
+    var it=CFG.variants.items[i];
+    cur.ch=it.ch; cur.en=it.en;
+    if(CFG.variants.kind==='color'){
+      cur.bg=it.bg; cur.ink=it.ink; cur.fg=it.fg; cur.outline=it.outline;
+      cur.grid=(it.ink==='#ffffff')?'rgba(255,255,255,.35)':'rgba(0,0,0,.16)';
+    } else {
+      picEl.innerHTML=CFG.pics[it.pic];
+    }
+    var bs=vrow.querySelectorAll('.vb');
+    for(var k=0;k<bs.length;k++){ bs[k].classList.toggle('on',k===i); bs[k].setAttribute('aria-pressed',k===i?'true':'false'); }
+    showEn=false; updateBig(); startWriting();
+  }
+  if(CFG.variants){
+    var bs=vrow.querySelectorAll('.vb');
+    for(var k=0;k<bs.length;k++){ (function(k){ bs[k].addEventListener('click',function(){ choose(k); }); })(k); }
+    choose(CFG.variantStart);
+  } else { updateBig(); startWriting(); }
+
+  var ws=document.querySelectorAll('.w');
+  function fitWord(b){ var t=b.querySelector('.t'); if(b.classList.contains('en')) fit(t,28,11); else t.style.fontSize=''; }
+  for(var i=0;i<ws.length;i++){ (function(b){
+    b.addEventListener('click',function(){
+      var on=b.classList.toggle('en');
+      b.querySelector('.t').textContent=on?b.getAttribute('data-en'):b.getAttribute('data-zh');
+      fitWord(b);
+    });
+  })(ws[i]); }
+  window.addEventListener('resize',function(){ for(var i=0;i<ws.length;i++) fitWord(ws[i]); if(showEn) updateBig(); });
+  if(document.fonts&&document.fonts.ready) document.fonts.ready.then(function(){ for(var i=0;i<ws.length;i++) fitWord(ws[i]); if(showEn) updateBig(); });
+})();
+</script></body></html>

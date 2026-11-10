@@ -1,0 +1,8 @@
+笔画数据 / Stroke data
+汉字笔画与笔顺数据来自 makemeahanzi（https://github.com/skishore/makemeahanzi），
+经 Hanzi Writer 数据仓库整理（https://github.com/chanind/hanzi-writer-data）。
+Stroke outlines and medians are derived from Arphic PL KaitiM GB / Arphic PL UKai fonts
+and are used under the Arphic Public License (ARPHICPL.TXT).
+
+根据 Arphic Public License，使用这些数据的作品需保留此说明，并附带许可全文。
+Copyright (C) 1999, 2000 Arphic Technology Co., Ltd.
